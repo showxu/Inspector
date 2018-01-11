@@ -366,7 +366,7 @@
 				PRODUCT_NAME = Inspector;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -388,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

@@ -37,7 +37,11 @@ final public class Method: Inspectable<ObjectiveC.Method> {
     /// Returns a string describing a method's return type.
     @available(OSX 10.5, *)
     public lazy var returnType: String = {
-        let type = method_copyReturnType(self.value)!
+        #if swift(>=4.0)
+            let type = method_copyReturnType(self.value)
+        #else
+            let type = method_copyReturnType(self.value)!
+        #endif
         defer {
             free(type)
         }
@@ -66,7 +70,11 @@ extension Method {
     @available(OSX 10.5, *)
     @inline(__always)
     final public func getDescription() -> objc_method_description {
-        let buffer = method_getDescription(value)!
+        #if swift(>=4.0)
+            let buffer = method_getDescription(value)
+        #else
+            let buffer = method_getDescription(value)!
+        #endif
         let desc = buffer.move()
         return desc
     }
