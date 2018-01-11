@@ -4,7 +4,7 @@
 //
 //
 
-import ObjectiveC
+import ObjectiveC.runtime
 
 /// An class type that represents an instance variable.
 final public class Ivar: Inspectable<ObjectiveC.Ivar> {

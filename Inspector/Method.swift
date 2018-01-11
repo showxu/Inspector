@@ -4,7 +4,7 @@
 //
 //
 
-import ObjectiveC
+import ObjectiveC.runtime
 
 /// An class type that represents an instance Method.
 final public class Method: Inspectable<ObjectiveC.Method> {

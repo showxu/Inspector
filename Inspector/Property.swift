@@ -12,7 +12,6 @@ final public class Property: Inspectable<ObjectiveC.objc_property_t> {
     /// Returns the name of a property.
     @available(OSX 10.5, *)
     public lazy var name: String = {
-        let a = ObjectiveC.Protocol.self
         return String(cString: property_getName(self.value))
     }()
  
@@ -48,7 +47,7 @@ final public class Property: Inspectable<ObjectiveC.objc_property_t> {
         return { [weak self] in
             guard
                 self != nil,
-                let value = property_copyAttributeValue(self!.value, $0.cString(using: .utf8) ?? [])
+                let value = property_copyAttributeValue(self!.value, Array($0.utf8CString))
             else { return nil }
             defer {
                 free(value)
