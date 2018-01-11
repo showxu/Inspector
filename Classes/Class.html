@@ -1,0 +1,2248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Class Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Class" class="dashAnchor"></a>
+    <a title="Class Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Inspector Docs</a> (74% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Inspector Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Class Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9Inspector8CategoryC">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Class.html">Class</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMP.html">IMP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Inspectable.html">Inspectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ivar.html">Ivar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property.html">Property</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property/TypeEncoding.html">– TypeEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Protocol.html">Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector.html">Selector</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObjCProtocol.html">ObjCProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OpaquePointer.html">OpaquePointer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/InspectableProtocol.html">InspectableProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Class</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">Class</span><span class="p">:</span> <span class="kt"><a href="../Classes/Inspectable.html">Inspectable</a></span><span class="o">&lt;</span><span class="kt">Swift</span><span class="o">.</span><span class="kt">AnyClass</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>An class type that represents an Objective-C class.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassCACSgSScfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassCACSgSScfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the class definition of a specified class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    note \c objc_getClass is different from \c objc_lookUpClass in that if the class is not registered, \c objc_getClass calls the class handler callback and then checks a second time to see whether the class is registered. \c objc_lookUpClass does not call the class handler callback.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the class to look up.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassCACSgSS_Sb6isMetatcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:isMeta:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassCACSgSS_Sb6isMetatcfc">init(_:isMeta:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the class/metaclass definition of a specified class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    \c objc_getClass is different from \c objc_lookUpClass in that if the class is not registered,
+\c objc_getClass calls the class handler callback and then checks a second time to see whether
+the class is registered. \c objc_lookUpClass does not call the class handler callback.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If the definition for the named class is not registered, this function calls the class handler.
+callback and then checks a second time to see if the class is registered. However, every class.
+definition must have a valid metaclass definition, and so the metaclass definition is always returned,
+whether it’s valid or not.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">isMeta</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the class to look up.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isMeta</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Specify the named class is meta or not</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassCACSgSS6lookUp_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(lookUp:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassCACSgSS6lookUp_tcfc">init(lookUp:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the class definition of a specified class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    \c objc_getClass is different from this function in that if the class is not
+registered, \c objc_getClass calls the class handler callback and then checks a second
+time to see whether the class is registered. This function does not call the class handler callback.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">lookUp</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the class to look up.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The Class object for the named class, or \c nil if the class
+is not registered with the Objective-C runtime.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassCACSS08requiredB0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(requiredClass:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassCACSS08requiredB0_tcfc">init(requiredClass:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the class definition of a specified class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This function is the same as \c objc_getClass, but kills the process if the class is not found.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This function is used by ZeroLink, where failing to find a class would be a compile-time link error without ZeroLink.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">requiredClass</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the class to look up.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The Class object for the named class.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC03getB4ListSayxGSgxyXlXpKcKlFZ"></a>
+                    <a name="//apple_ref/swift/Method/getClassList(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC03getB4ListSayxGSgxyXlXpKcKlFZ">getClassList(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Obtains the list of registered class definitions.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The Objective-C runtime library automatically registers all the classes defined in your source code.
+You can create class definitions at runtime and register them with the \c objc_addClass function.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    You cannot assume that class objects you get from this function are classes that inherit
+from \c NSObject, so you cannot safely call any methods on such classes without detecting
+that the method is implemented first.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="n">getClassList</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="kt">Element</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">T</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An integer value indicating the total number of registered classes.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC03getB4ListSayyXlXpGSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/getClassList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC03getB4ListSayyXlXpGSgyFZ">getClassList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">getClassList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC4nameSSv"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC4nameSSv">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the name of a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC6isMetaSbv"></a>
+                    <a name="//apple_ref/swift/Property/isMeta" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC6isMetaSbv">isMeta</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value that indicates whether a class object is a metaclass.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">isMeta</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC10superclassyXlXpSgv"></a>
+                    <a name="//apple_ref/swift/Property/superclass" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC10superclassyXlXpSgv">superclass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the superclass of a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">superclass</span><span class="p">:</span> <span class="kt">Element</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC7versions5Int32Vv"></a>
+                    <a name="//apple_ref/swift/Property/version" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC7versions5Int32Vv">version</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The version number of a class definition.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    note You can use the version number of the class definition to provide versioning of the
+interface that your class represents to other classes. This is especially useful for object
+serialization (that is, archiving of the object in a flattened form), where it is important to
+recognize changes to the layout of the instance variables in different class-definition versions.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    note Classes derived from the Foundation framework \c NSObject class can set the class-definition
+version number using the \c setVersion: class method, which is implemented using the \c class_setVersion function.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC12instanceSizeSiv"></a>
+                    <a name="//apple_ref/swift/Property/instanceSize" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC12instanceSizeSiv">instanceSize</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the size of instances of a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">instanceSize</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC19getInstanceVariableAA4IvarCSgSSF"></a>
+                    <a name="//apple_ref/swift/Method/getInstanceVariable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC19getInstanceVariableAA4IvarCSgSSF">getInstanceVariable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the \c Ivar for a specified instance variable of a given class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getInstanceVariable</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Ivar.html">Ivar</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the instance variable definition to obtain.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Inspectable Ivar</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC03getB8VariableAA4IvarCSgSSF"></a>
+                    <a name="//apple_ref/swift/Method/getClassVariable(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC03getB8VariableAA4IvarCSgSSF">getClassVariable(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the Ivar for a specified class variable of a given class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getClassVariable</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Ivar.html">Ivar</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the class variable definition to obtain.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Inspectable Ivar</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC11getIvarListSayAA0D0CGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getIvarList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC11getIvarListSayAA0D0CGSgyF">getIvarList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the instance variables declared by a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getIvarList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/Ivar.html">Ivar</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of pointers of type Ivar describing the instance variables declared by the class.
+Any instance variables declared by superclasses are not included. The array contains *outCount
+pointers followed by a NULL terminator. You must free the array with free().</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC17getInstanceMethodAA0E0CSg10ObjectiveC8SelectorVF"></a>
+                    <a name="//apple_ref/swift/Method/getInstanceMethod(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC17getInstanceMethodAA0E0CSg10ObjectiveC8SelectorVF">getInstanceMethod(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a specified instance method for a given class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    note This function searches superclasses for implementations, whereas \c class_copyMethodList does not.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getInstanceMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Method.html">Method</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The selector of the method you want to retrieve.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The method that corresponds to the implementation of the selector specified by
+\e name for the class specified by \e cls, or \c NULL if the specified class or
+its superclasses do not contain an instance method with the specified selector.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC17getInstanceMethodAA0E0CSgAA8SelectorCF"></a>
+                    <a name="//apple_ref/swift/Method/getInstanceMethod(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC17getInstanceMethodAA0E0CSgAA8SelectorCF">getInstanceMethod(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getInstanceMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Method.html">Method</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC03getB6MethodAA0D0CSg10ObjectiveC8SelectorVF"></a>
+                    <a name="//apple_ref/swift/Method/getClassMethod(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC03getB6MethodAA0D0CSg10ObjectiveC8SelectorVF">getClassMethod(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a pointer to the data structure describing a given class method for a given class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    note Note that this function searches superclasses for implementations,
+whereas \c class_copyMethodList does not.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getClassMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Method.html">Method</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A pointer of type \c SEL. Pass the selector of the method you want to retrieve.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Inspectable Method</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC03getB6MethodAA0D0CSgAA8SelectorCF"></a>
+                    <a name="//apple_ref/swift/Method/getClassMethod(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC03getB6MethodAA0D0CSgAA8SelectorCF">getClassMethod(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Inspectable version of getClassMethod(_ name: ObjectiveC.Selector) -&gt; Method?</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getClassMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Method.html">Method</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC23getMethodImplementationAA3IMPCSg10ObjectiveC8SelectorVF"></a>
+                    <a name="//apple_ref/swift/Method/getMethodImplementation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC23getMethodImplementationAA3IMPCSg10ObjectiveC8SelectorVF">getMethodImplementation(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the function pointer that would be called if a
+particular message were sent to an instance of a class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    note \c class_getMethodImplementation may be faster than \c
+method_getImplementation(class_getInstanceMethod(cls, name)).
+
+</div>
+<li>@note The function pointer returned may be a function internal to the runtime instead of
+an actual method implementation. For example, if instances of the class do not respond to
+the selector, the function pointer returned will be part of the runtime&rsquo;s message forwarding machinery.</li>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selector.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The function pointer that would be called if \c [object name] were called
+ with an instance of the class, or \c NULL if \e cls is \c Nil.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC23getMethodImplementationAA3IMPCSgAA8SelectorCF"></a>
+                    <a name="//apple_ref/swift/Method/getMethodImplementation(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC23getMethodImplementationAA3IMPCSgAA8SelectorCF">getMethodImplementation(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC23getMethodImplementationAA3IMPCSgAA8SelectorC5stret_tF"></a>
+                    <a name="//apple_ref/swift/Method/getMethodImplementation(stret:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC23getMethodImplementationAA3IMPCSgAA8SelectorC5stret_tF">getMethodImplementation(stret:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">stret</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC18respondsToSelectorSb10ObjectiveC0E0VF"></a>
+                    <a name="//apple_ref/swift/Method/respondsToSelector(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC18respondsToSelectorSb10ObjectiveC0E0VF">respondsToSelector(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value that indicates whether instances of a class respond to a particular selector.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    You should usually use \c NSObject&rsquo;s \c respondsToSelector: or \c instancesRespondToSelector:
+methods instead of this function.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">respondsToSelector</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selector.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>\c YES if instances of the class respond to the selector, otherwise \c NO.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC18respondsToSelectorSbAA0E0CF"></a>
+                    <a name="//apple_ref/swift/Method/respondsToSelector(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC18respondsToSelectorSbAA0E0CF">respondsToSelector(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">respondsToSelector</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC13getMethodListSayAA0D0CGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getMethodList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC13getMethodListSayAA0D0CGSgyF">getMethodList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the instance methods implemented by a class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note To get the class methods of a class, use \c class_copyMethodList(object_getClass(cls), &amp;count).
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note To get the implementations of methods that may be implemented by superclasses,
+use \c class_getInstanceMethod or \c class_getClassMethod.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/Method.html">Method</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of pointers of type Method describing the instance methods
+implemented by the class—any instance methods implemented by superclasses are not included.
+The array contains *outCount pointers followed by a NULL terminator. You must free the array with free().</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC18conformsToProtocolSbSo0E0CSgF"></a>
+                    <a name="//apple_ref/swift/Method/conformsToProtocol(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC18conformsToProtocolSbSo0E0CSgF">conformsToProtocol(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value that indicates whether a class conforms to a given protocol.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    You should usually use NSObject&rsquo;s conformsToProtocol: method instead of this function.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">conformsToProtocol</span><span class="p">(</span><span class="n">_</span> <span class="nv">aProtocol</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="err">`</span><span class="kt"><a href="../Classes/Protocol.html">Protocol</a></span><span class="err">`</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>protocol</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A protocol.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if cls conforms to protocol, otherwise NO.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC15getProtocolListSayAA0D0CGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getProtocolList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC15getProtocolListSayAA0D0CGSgyF">getProtocolList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the protocols adopted by a class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If cls adopts no protocols, or cls is Nil, returns NULL and *outCount is 0.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProtocolList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/Protocol.html">Protocol</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of pointers of type Protocol* describing the protocols adopted
+by the class. Any protocols adopted by superclasses or other protocols are not included.
+The array contains *outCount pointers followed by a NULL terminator. You must free the array with free().</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC11getPropertyAA0D0CSgSSF"></a>
+                    <a name="//apple_ref/swift/Method/getProperty(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC11getPropertyAA0D0CSgSSF">getProperty(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a property with a given name of a given class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProperty</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Property.html">Property</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the property you want to inspect.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Inspectable property</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC15getPropertyListSayAA0D0CGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getPropertyList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC15getPropertyListSayAA0D0CGSgyF">getPropertyList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes the properties declared by a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPropertyList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/Property.html">Property</a></span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of pointers of type \c objc_property_t describing the properties
+declared by the class. Any properties declared by superclasses are not included.
+The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free().</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC10ivarLayoutSPys5UInt8VGSgv"></a>
+                    <a name="//apple_ref/swift/Property/ivarLayout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC10ivarLayoutSPys5UInt8VGSgv">ivarLayout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ivar layout for a given class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ivarLayout</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC14weakIvarLayoutSPys5UInt8VGSgv"></a>
+                    <a name="//apple_ref/swift/Property/weakIvarLayout" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC14weakIvarLayoutSPys5UInt8VGSgv">weakIvarLayout</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Layout for weak Ivars for a given class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">weakIvarLayout</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC9addMethodSb10ObjectiveC8SelectorV_s13OpaquePointerV3impSSSg5typestF"></a>
+                    <a name="//apple_ref/swift/Method/addMethod(_:imp:types:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC9addMethodSb10ObjectiveC8SelectorV_s13OpaquePointerV3impSSSg5typestF">addMethod(_:imp:types:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a new method to a class with a given name and implementation.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note class_addMethod will add an override of a superclass&rsquo;s implementation,
+but will not replace an existing implementation in this class.
+To change an existing implementation, use method_setImplementation.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                      <span class="nv">imp</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
+                      <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selector that specifies the name of the method being added.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A function which is the implementation of the new method. The function must take at least two arguments—self and _cmd.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>types</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of characters that describe the types of the arguments to the method.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the method was added successfully, otherwise NO
+(for example, the class already contains a method implementation with that name).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC9addMethodSbAA8SelectorC_AA3IMPC3impSSSg5typestF"></a>
+                    <a name="//apple_ref/swift/Method/addMethod(_:imp:types:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC9addMethodSbAA8SelectorC_AA3IMPC3impSSSg5typestF">addMethod(_:imp:types:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                      <span class="nv">imp</span><span class="p">:</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
+                      <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC13replaceMethods13OpaquePointerVSg10ObjectiveC8SelectorV_AF3impSSSg5typestF"></a>
+                    <a name="//apple_ref/swift/Method/replaceMethod(_:imp:types:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC13replaceMethods13OpaquePointerVSg10ObjectiveC8SelectorV_AF3impSSSg5typestF">replaceMethod(_:imp:types:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replaces the implementation of a method for a given class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    This function behaves in two different ways:
+
+<ul>
+<li>If the method identified by \e name does not yet exist, it is added as if \c class_addMethod were called.
+The type encoding specified by \e types is used as given.</li>
+<li>If the method identified by \e name does exist, its \c IMP is replaced as if \c method_setImplementation were called.
+The type encoding specified by \e types is ignored.</li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replaceMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                          <span class="nv">imp</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
+                          <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selector that identifies the method whose implementation you want to replace.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>imp</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new implementation for the method identified by name for the class identified by cls.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>types</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>types An array of characters that describe the types of the arguments to the method.
+Since the function must take at least two arguments—self and _cmd, the second and third characters
+must be “@:” (the first character is the return type).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The previous implementation of the method identified by \e name for the class identified by \e cls.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC13replaceMethodAA3IMPCSgAA8SelectorC_AF3impSSSg5typestF"></a>
+                    <a name="//apple_ref/swift/Method/replaceMethod(_:imp:types:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC13replaceMethodAA3IMPCSgAA8SelectorC_AF3impSSSg5typestF">replaceMethod(_:imp:types:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replaceMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                          <span class="nv">imp</span><span class="p">:</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
+                          <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC7addIvarSbSS_SS5typestF"></a>
+                    <a name="//apple_ref/swift/Method/addIvar(_:types:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC7addIvarSbSS_SS5typestF">addIvar(_:types:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a new instance variable to a class.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note This function may only be called after objc_allocateClassPair and before objc_registerClassPair.
+Adding an instance variable to an existing class is not supported.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note The class must not be a metaclass. Adding an instance variable to a metaclass is not supported.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note The instance variable&rsquo;s minimum alignment in bytes is 1&lt;&lt;align. The minimum alignment of an instance
+variable depends on the ivar&rsquo;s type and the machine architecture.
+For variables of any pointer type, pass log2(sizeof(pointer_type)).
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addIvar</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>size</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>size</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>alignment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>alignment</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>types</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>types</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the instance variable was added successfully, otherwise NO
+(for example, the class already contains an instance variable with that name).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC7addIvarSbAA0D0CF"></a>
+                    <a name="//apple_ref/swift/Method/addIvar(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC7addIvarSbAA0D0CF">addIvar(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addIvar</span><span class="p">(</span><span class="n">_</span> <span class="nv">ivar</span><span class="p">:</span> <span class="kt"><a href="../Classes/Ivar.html">Ivar</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC11addProtocolSbSo0D0CF"></a>
+                    <a name="//apple_ref/swift/Method/addProtocol(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC11addProtocolSbSo0D0CF">addProtocol(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a protocol to a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addProtocol</span><span class="p">(</span><span class="n">_</span> <span class="nv">aProtocol</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="err">`</span><span class="kt"><a href="../Classes/Protocol.html">Protocol</a></span><span class="err">`</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aProtocol</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The protocol to add to \e cls.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>\c YES if the method was added successfully, otherwise \c NO
+(for example, the class already conforms to that protocol).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC11addPropertySbSS_SaySC25objc_property_attribute_tVGSg10attributesSi0G5CounttF"></a>
+                    <a name="//apple_ref/swift/Method/addProperty(_:attributes:attributeCount:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC11addPropertySbSS_SaySC25objc_property_attribute_tVGSg10attributesSi0G5CounttF">addProperty(_:attributes:attributeCount:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a property to a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addProperty</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                        <span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="n">objc_property_attribute_t</span><span class="p">]?,</span>
+                        <span class="nv">attributeCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of property attributes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributeCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of attributes in \e attributes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>\c YES if the property was added successfully, otherwise \c NO
+(for example, the class already has that property).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC11addPropertySbAA0D0CF"></a>
+                    <a name="//apple_ref/swift/Method/addProperty(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC11addPropertySbAA0D0CF">addProperty(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addProperty</span><span class="p">(</span><span class="n">_</span> <span class="nv">p</span><span class="p">:</span> <span class="kt"><a href="../Classes/Property.html">Property</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC15replacePropertyySS_SPySC25objc_property_attribute_tVGSgs6UInt32VtF"></a>
+                    <a name="//apple_ref/swift/Method/replaceProperty(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC15replacePropertyySS_SPySC25objc_property_attribute_tVGSgs6UInt32VtF">replaceProperty(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replace a property of a class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replaceProperty</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">attributes</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">objc_property_attribute_t</span><span class="o">&gt;</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">attributeCount</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of property attributes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributeCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of attributes in \e attributes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC14createInstanceypSgSiF"></a>
+                    <a name="//apple_ref/swift/Method/createInstance(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC14createInstanceypSgSiF">createInstance(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an instance of a class, allocating memory for the class in the
+default malloc memory zone.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createInstance</span><span class="p">(</span><span class="n">_</span> <span class="nv">extraBytes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extraBytes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An integer indicating the number of extra bytes to allocate.
+The additional bytes can be used to store additional instance variables beyond
+those defined in the class definition.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of the class \e cls.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC03subB0SayyXlXpGSi5depth_tF"></a>
+                    <a name="//apple_ref/swift/Method/subClass(depth:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC03subB0SayyXlXpGSi5depth_tF">subClass(depth:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subClass</span><span class="p">(</span><span class="nv">depth</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassCACSgyXlXpSg_SSSitcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassCACSgyXlXpSg_SSSitcfc">init(_:_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new class and metaclass, or Nil if the class could not be created (for example, the desired name is already in use).</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note You can get a pointer to the new metaclass by calling \c object_getClass(newClass).
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note To create a new class, start by calling \c objc_allocateClassPair.
+Then set the class&rsquo;s attributes with functions like \c class_addMethod and \c class_addIvar.
+When you are done building the class, call \c objc_registerClassPair. The new class is now ready for use.
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Note Instance methods and instance variables should be added to the class itself.
+Class methods should be added to the metaclass.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">_</span> <span class="nv">superclass</span><span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">AnyClass</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">extraBytes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>superclass</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The class to use as the new class&rsquo;s superclass, or \c Nil to create a new root class.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The string to use as the new class&rsquo;s name. The string will be copied.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extraBytes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of bytes to allocate for indexed ivars at the end of
+the class and metaclass objects. This should usually be \c 0.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC8registeryyF"></a>
+                    <a name="//apple_ref/swift/Method/register()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC8registeryyF">register()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a class that was allocated using \c objc_allocateClassPair.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC9duplicateyXlXpSS_SitF"></a>
+                    <a name="//apple_ref/swift/Method/duplicate(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC9duplicateyXlXpSS_SitF">duplicate(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used by Foundation&rsquo;s Key-Value Observing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">duplicate</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">extraBytes</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Element</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of new class</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extraBytes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>extraBytes</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Duplicated class</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector5ClassC7disposeyyF"></a>
+                    <a name="//apple_ref/swift/Method/dispose()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector5ClassC7disposeyyF">dispose()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Destroy a class and its associated metaclass.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The class to be destroyed. It must have been allocated with
+\c objc_allocateClassPair
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Do not call if instances of this class or a subclass exist.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dispose</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/0xxd0/Inspector" target="_blank" rel="external">0xxd0</a>. All rights reserved. (Last updated: 2018-01-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

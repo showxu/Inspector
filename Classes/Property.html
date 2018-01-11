@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Property Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Property" class="dashAnchor"></a>
+    <a title="Property Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Inspector Docs</a> (74% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Inspector Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Property Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9Inspector8CategoryC">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Class.html">Class</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMP.html">IMP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Inspectable.html">Inspectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ivar.html">Ivar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property.html">Property</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property/TypeEncoding.html">– TypeEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Protocol.html">Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector.html">Selector</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObjCProtocol.html">ObjCProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OpaquePointer.html">OpaquePointer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/InspectableProtocol.html">InspectableProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Property</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">Property</span><span class="p">:</span> <span class="kt"><a href="../Classes/Inspectable.html">Inspectable</a></span><span class="o">&lt;</span><span class="kt">ObjectiveC</span><span class="o">.</span><span class="n">objc_property_t</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>An class type that represents an Objective-C declared property.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC4nameSSv"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC4nameSSv">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the name of a property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC10attributesSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/attributes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC10attributesSSSgv">attributes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the attribute string of a property.
+The format of the attribute string is described in Declared Properties in Objective-C Runtime Programming Guide.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">attributes</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC13attributeListSaySC014objc_property_C2_tVGSgv"></a>
+                    <a name="//apple_ref/swift/Property/attributeList" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC13attributeListSaySC014objc_property_C2_tVGSgv">attributeList</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of property attributes for a property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">attributeList</span><span class="p">:</span> <span class="p">[</span><span class="n">objc_property_attribute_t</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC14attributeValueSSSgSScv"></a>
+                    <a name="//apple_ref/swift/Property/attributeValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC14attributeValueSSSgSScv">attributeValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the value of a property attribute given the attribute name.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">attributeValue</span><span class="p">:</span> <span class="p">((</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC12TypeEncodingO"></a>
+                    <a name="//apple_ref/swift/Enum/TypeEncoding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC12TypeEncodingO">TypeEncoding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Classes/Property/TypeEncoding.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TypeEncoding</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC13subAttributess10DictionaryVys9SubstringVAHGv"></a>
+                    <a name="//apple_ref/swift/Property/subAttributes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC13subAttributess10DictionaryVys9SubstringVAHGv">subAttributes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">subAttributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">Substring</span><span class="p">:</span> <span class="kt">Substring</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/FIXME:%20Optional%20chain"></a>
+                <a name="//apple_ref/swift/Section/FIXME: Optional chain" class="dashAnchor"></a>
+                <a href="#/FIXME:%20Optional%20chain">
+                  <h3 class="section-name">FIXME: Optional chain</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC12typeEncodingSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/typeEncoding" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC12typeEncodingSSSgv">typeEncoding</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">typeEncoding</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/FIXME:%20Optional%20chain2"></a>
+                <a name="//apple_ref/swift/Section/FIXME: Optional chain" class="dashAnchor"></a>
+                <a href="#/FIXME:%20Optional%20chain2">
+                  <h3 class="section-name">FIXME: Optional chain</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC4iVarSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/iVar" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC4iVarSSSgv">iVar</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">iVar</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/FIXME:%20Optional%20chain3"></a>
+                <a name="//apple_ref/swift/Section/FIXME: Optional chain" class="dashAnchor"></a>
+                <a href="#/FIXME:%20Optional%20chain3">
+                  <h3 class="section-name">FIXME: Optional chain</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC15typeEncodingOldSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/typeEncodingOld" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC15typeEncodingOldSSSgv">typeEncodingOld</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">typeEncodingOld</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC6getterSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/getter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC6getterSSSgv">getter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">getter</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC6setterSSSgv"></a>
+                    <a name="//apple_ref/swift/Property/setter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC6setterSSSgv">setter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property defines a custom setter selector name. The name follows the S (for example, ScustomSetter:,).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">setter</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC10isReadOnlySbv"></a>
+                    <a name="//apple_ref/swift/Property/isReadOnly" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC10isReadOnlySbv">isReadOnly</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property is read-only (readonly).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isReadOnly</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC6isCopySbv"></a>
+                    <a name="//apple_ref/swift/Property/isCopy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC6isCopySbv">isCopy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property is a copy of the value last assigned (copy).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isCopy</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC8isRetainSbv"></a>
+                    <a name="//apple_ref/swift/Property/isRetain" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC8isRetainSbv">isRetain</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property is a reference to the value last assigned (retain).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isRetain</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC11isNonatomicSbv"></a>
+                    <a name="//apple_ref/swift/Property/isNonatomic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC11isNonatomicSbv">isNonatomic</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property is non-atomic (nonatomic).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isNonatomic</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC16hasDefinedGetterSbv"></a>
+                    <a name="//apple_ref/swift/Property/hasDefinedGetter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC16hasDefinedGetterSbv">hasDefinedGetter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property defines a custom getter selector name. The name follows the G (for example, GcustomGetter,).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasDefinedGetter</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC16hasDefinedSetterSbv"></a>
+                    <a name="//apple_ref/swift/Property/hasDefinedSetter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC16hasDefinedSetterSbv">hasDefinedSetter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property defines a custom setter selector name. The name follows the S (for example, ScustomSetter:,).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hasDefinedSetter</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC9isDynamicSbv"></a>
+                    <a name="//apple_ref/swift/Property/isDynamic" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC9isDynamicSbv">isDynamic</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property is dynamic (@dynamic).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isDynamic</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC6isWeakSbv"></a>
+                    <a name="//apple_ref/swift/Property/isWeak" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC6isWeakSbv">isWeak</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property is a weak reference (__weak).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isWeak</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8PropertyC27isGarbageCollectionEligibleSbv"></a>
+                    <a name="//apple_ref/swift/Property/isGarbageCollectionEligible" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8PropertyC27isGarbageCollectionEligibleSbv">isGarbageCollectionEligible</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The property is eligible for garbage collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isGarbageCollectionEligible</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/0xxd0/Inspector" target="_blank" rel="external">0xxd0</a>. All rights reserved. (Last updated: 2018-01-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IMP Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/IMP" class="dashAnchor"></a>
+    <a title="IMP Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Inspector Docs</a> (74% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Inspector Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        IMP Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9Inspector8CategoryC">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Class.html">Class</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMP.html">IMP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Inspectable.html">Inspectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ivar.html">Ivar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property.html">Property</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property/TypeEncoding.html">– TypeEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Protocol.html">Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector.html">Selector</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObjCProtocol.html">ObjCProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OpaquePointer.html">OpaquePointer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/InspectableProtocol.html">InspectableProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>IMP</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">IMP</span><span class="p">:</span> <span class="kt"><a href="../Classes/Inspectable.html">Inspectable</a></span><span class="o">&lt;</span><span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt">IMP</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector3IMPCACyp5block_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(block:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector3IMPCACyp5block_tcfc">init(block:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a pointer to a function that will call the block
+ when the method is called.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The IMP that calls this block. Must be disposed of with
+\c imp_removeBlock.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt">Block</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block that implements this method. Its signature should
+be: method_return_type ^(id self, method_args&hellip;).
+The selector is not available as a parameter to this block.
+The block is copied with \c Block_copy().</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector3IMPC5blockypSgv"></a>
+                    <a name="//apple_ref/swift/Property/block" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector3IMPC5blockypSgv">block</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return the block associated with an IMP that was created using
+\c imp_implementationWithBlock.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">Block</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector3IMPC6removeSbyF"></a>
+                    <a name="//apple_ref/swift/Method/remove()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector3IMPC6removeSbyF">remove()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Disassociates a block from an IMP that was created using
+\c imp_implementationWithBlock and releases the copy of the
+block that was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">remove</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES if the block was released successfully, NO otherwise.
+(For example, the block might not have been used to create an IMP previously).</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/0xxd0/Inspector" target="_blank" rel="external">0xxd0</a>. All rights reserved. (Last updated: 2018-01-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

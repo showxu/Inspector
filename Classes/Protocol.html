@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocol Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Protocol" class="dashAnchor"></a>
+    <a title="Protocol Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Inspector Docs</a> (74% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Inspector Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Protocol Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:9Inspector8CategoryC">Category</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Class.html">Class</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IMP.html">IMP</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Inspectable.html">Inspectable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ivar.html">Ivar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property.html">Property</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Property/TypeEncoding.html">– TypeEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Protocol.html">Protocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Selector.html">Selector</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Dictionary.html">Dictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObjCProtocol.html">ObjCProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OpaquePointer.html">OpaquePointer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/InspectableProtocol.html">InspectableProtocol</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Protocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">Protocol</span><span class="p">:</span> <span class="kt"><a href="../Classes/Inspectable.html">Inspectable</a></span><span class="o">&lt;</span><span class="kt">ObjectiveC</span><span class="o">.</span><span class="err">`</span><span class="kt">Protocol</span><span class="err">`</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+              </div>
+            <p>An class type that represents an Objective-C declared property.
+Type Inspectable<ObjectiveC.Protocol> is not available here cause the
+.Property is built-in syntax &lsquo;foo.Protocol&rsquo; expression
+So we use ObjectiveC.<code>Protocol</code> instand</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolCACSgSS8allocate_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(allocate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolCACSgSS8allocate_tcfc">init(allocate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new protocol instance that cannot be used until registered with \c objc_registerProtocol()</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">allocate</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Protocol name</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolCACSgSScfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolCACSgSScfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a specified protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a protocol.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolCACSgSS_Sb8allocatetcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:allocate:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolCACSgSS_Sb8allocatetcfc">init(_:allocate:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a specified protocol, or creates a new protocol instance if no named protocol could be found.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">allocate</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Protocol name</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>allocate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If create a new protocol or not if no named protocol could be found.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC03getB4ListSaySoABCGSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/getProtocolList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC03getB4ListSaySoABCGSgyFZ">getProtocolList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of all the protocols known to the runtime.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">getProtocolList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A C array of all the protocols known to the runtime. The array contains
+\c *outCount pointers followed by a \c NULL terminator. You must free the list with \c free().</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC8conformsSbSoABCSg2to_tF"></a>
+                    <a name="//apple_ref/swift/Method/conforms(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC8conformsSbSoABCSg2to_tF">conforms(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value that indicates whether one protocol conforms to another protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">conforms</span><span class="p">(</span><span class="n">to</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Element</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC7isEqualSbSoABC2to_tF"></a>
+                    <a name="//apple_ref/swift/Method/isEqual(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC7isEqualSbSoABC2to_tF">isEqual(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a Boolean value that indicates whether two protocols are equal.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">to</span> <span class="nv">other</span><span class="p">:</span> <span class="kt">Element</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC4nameSSv"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC4nameSSv">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the name of a protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC20getMethodDescriptionSC23objc_method_descriptionV10ObjectiveC8SelectorV_Sb10isRequiredSb0K8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/getMethodDescription(_:isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC20getMethodDescriptionSC23objc_method_descriptionV10ObjectiveC8SelectorV_Sb10isRequiredSb0K8InstancetF">getMethodDescription(_:isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a method description structure for a specified method of a given protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodDescription</span><span class="p">(</span><span class="n">_</span> <span class="nv">aSel</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                                 <span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                                 <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">objc_method_description</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>aSel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selector.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Boolean value that indicates whether aSel is a required method.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isInstance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Boolean value that indicates whether aSel is an instance method.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An \c objc_method_description structure that describes the method specified by
+\e aSel, \e isRequiredMethod, and \e isInstanceMethod for the protocol \e p.
+If the protocol does not contain the specified method, returns an \c
+objc_method_description structure with the value \c {NULL, \c NULL}.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC20getMethodDescriptionSC23objc_method_descriptionVAA8SelectorC_Sb10isRequiredSb0J8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/getMethodDescription(_:isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC20getMethodDescriptionSC23objc_method_descriptionVAA8SelectorC_Sb10isRequiredSb0J8InstancetF">getMethodDescription(_:isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodDescription</span><span class="p">(</span><span class="n">_</span> <span class="nv">aSel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                                 <span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                                 <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">objc_method_description</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC24getMethodDescriptionListSaySC23objc_method_descriptionVGSgSb10isRequired_Sb0J8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/getMethodDescriptionList(isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC24getMethodDescriptionListSaySC23objc_method_descriptionVGSgSb10isRequired_Sb0J8InstancetF">getMethodDescriptionList(isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of method descriptions of methods meeting a given specification for a given protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodDescriptionList</span><span class="p">(</span><span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                                     <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">objc_method_description</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Boolean value that indicates whether returned methods should be required methods (pass YES to specify required methods).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isInstance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>isInstanceMethod A Boolean value that indicates whether returned methods should be instance methods (pass YES to specify instance methods).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A C array of \c objc_method_description structures containing the names and types of \e p&rsquo;s methods specified by \e isRequiredMethod and \e isInstanceMethod. The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the list with \c free(). If the protocol declares no methods that meet the specification, \c NULL is returned and \c *outCount is 0.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC11getPropertys13OpaquePointerVSgSS_Sb10isRequiredSb0G8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/getProperty(_:isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC11getPropertys13OpaquePointerVSgSS_Sb10isRequiredSb0G8InstancetF">getProperty(_:isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the specified property of a given protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProperty</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">objc_property_t</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of a property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>\c YES searches for a required property, \c NO searches for an optional property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isInstance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>\c YES searches for an instance property, \c NO searches for a class property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The property specified by \e name, \e isRequiredProperty, and \e isInstanceProperty for \e proto, or \c NULL if none of \e proto&rsquo;s properties meets the specification.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC15getPropertyListSays13OpaquePointerVGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getPropertyList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC15getPropertyListSays13OpaquePointerVGSgyF">getPropertyList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of the required instance properties declared by a protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPropertyList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">objc_property_t</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A C array of pointers of type \c objc_property_t describing the properties declared by \e proto. Any properties declared by other protocols adopted by this protocol are not included. The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free(). If the protocol declares no matching properties, \c NULL is returned and \c *outCount is \c 0.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC15getPropertyListSays13OpaquePointerVGSgSb10isRequired_Sb0H8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/getPropertyList(isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC15getPropertyListSays13OpaquePointerVGSgSb10isRequired_Sb0H8InstancetF">getPropertyList(isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of properties declared by a protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getPropertyList</span><span class="p">(</span><span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                            <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">objc_property_t</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>\c YES returns required properties, \c NO returns optional properties.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isInstance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>\c YES returns instance properties, \c NO returns class properties.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A C array of pointers of type \c objc_property_t describing the properties declared by \e proto.
+Any properties declared by other protocols adopted by this protocol are not included. The array contains
+\c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free().
+If the protocol declares no matching properties, \c NULL is returned and \c *outCount is \c 0.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC03getB4ListSaySoABCGSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getProtocolList()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC03getB4ListSaySoABCGSgyF">getProtocolList()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an array of the protocols adopted by a protocol.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProtocolList</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Element</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A C array of protocols adopted by \e proto. The array contains \e *outCount pointers followed
+by a \c NULL terminator. You must free the array with \c free(). If the protocol declares no properties,
+\c NULL is returned and \c *outCount is \c 0.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC8registeryyF"></a>
+                    <a name="//apple_ref/swift/Method/register()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC8registeryyF">register()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a newly constructed protocol with the runtime. The protocol will be ready for use and is immutable after this.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">register</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC20addMethodDescriptiony10ObjectiveC8SelectorV_SSSg5typesSb10isRequiredSb0I8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/addMethodDescription(_:types:isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC20addMethodDescriptiony10ObjectiveC8SelectorV_SSSg5typesSb10isRequiredSb0I8InstancetF">addMethodDescription(_:types:isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a method to a protocol. The protocol must be under construction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addMethodDescription</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                                 <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                                 <span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                                 <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the method to add.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>types</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A C string that represents the method signature.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>YES if the method is not an optional method.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isInstance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>YES if the method is an instance method.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC20addMethodDescriptionyAA8SelectorC_SSSg5typesSb10isRequiredSb0H8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/addMethodDescription(_:types:isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC20addMethodDescriptionyAA8SelectorC_SSSg5typesSb10isRequiredSb0H8InstancetF">addMethodDescription(_:types:isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addMethodDescription</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
+                                 <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span>
+                                 <span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                                 <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC03addB0ySoABCF"></a>
+                    <a name="//apple_ref/swift/Method/addProtocol(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC03addB0ySoABCF">addProtocol(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds an incorporated protocol to another protocol. The protocol being added to must still be under construction, while the additional protocol must be already constructed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addProtocol</span><span class="p">(</span><span class="n">_</span> <span class="nv">addition</span><span class="p">:</span> <span class="kt">Element</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>addition</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The protocol you want to incorporate into \e proto, it must be registered.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9Inspector8ProtocolC11addPropertyySS_SPySC25objc_property_attribute_tVGSg10attributess6UInt32V0G5CountSb10isRequiredSb0K8InstancetF"></a>
+                    <a name="//apple_ref/swift/Method/addProperty(_:attributes:attributeCount:isRequired:isInstance:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9Inspector8ProtocolC11addPropertyySS_SPySC25objc_property_attribute_tVGSg10attributess6UInt32V0G5CountSb10isRequiredSb0K8InstancetF">addProperty(_:attributes:attributeCount:isRequired:isInstance:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a property to a protocol. The protocol must be under construction.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addProperty</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                        <span class="nv">attributes</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="n">objc_property_attribute_t</span><span class="o">&gt;</span><span class="p">?,</span>
+                        <span class="nv">attributeCount</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span>
+                        <span class="nv">isRequired</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span>
+                        <span class="nv">isInstance</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of property attributes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attributeCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of attributes in \e attributes.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isRequired</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>YES if the property (accessor methods) is not optional.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isInstance</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>YES if the property (accessor methods) are instance methods.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s26ExpressibleByStringLiteralPx0cD4TypeQz06stringD0_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s26ExpressibleByStringLiteralPx0cD4TypeQz06stringD0_tcfc">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/0xxd0/Inspector" target="_blank" rel="external">0xxd0</a>. All rights reserved. (Last updated: 2018-01-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
