@@ -13,8 +13,6 @@ final public class IMP: Inspectable<ObjectiveC.IMP>  {
         super.init(value)
     }
 
-    @available(OSX 10.7, *)
-    
     ///  Creates a pointer to a function that will call the block
     ///  when the method is called.
     ///
@@ -24,6 +22,7 @@ final public class IMP: Inspectable<ObjectiveC.IMP>  {
     ///     The block is copied with \c Block_copy().
     /// - Note: The IMP that calls this block. Must be disposed of with
     ///     \c imp_removeBlock.
+    @available(OSX 10.7, *)
     public convenience init(block: Any) {
         #if swift(>=4.0)
         let impl = imp_implementationWithBlock(block)
