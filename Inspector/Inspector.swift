@@ -13,3 +13,10 @@ public class Inspectable<T> {
         self.value = value
     }
 }
+
+extension String {
+    
+    public var cString: [CChar] {
+        return Array(utf8CString)
+    }
+}

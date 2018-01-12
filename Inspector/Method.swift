@@ -9,18 +9,22 @@ import ObjectiveC.runtime
 /// An class type that represents an instance Method.
 final public class Method: Inspectable<ObjectiveC.Method> {
     
+    public override init(_ value: Element) {
+        super.init(value)
+    }
+    
     /// Returns the name of a method.
-    public lazy var name: Selector  = {
-        return  method_getName(self.value)
+    public lazy var name: Selector = {
+        return Selector(method_getName(self.value))
     }()
     
     /// Returns the implementation of a method.
     /// The implementation can be modified, so it can't be lazy.
     @available(OSX 10.5, *)
     public var implementation: IMP {
-        return method_getImplementation(value)
+        return IMP(method_getImplementation(value))
     }
-    
+
     /// Returns a string describing a method's parameter and return types.
     @available(OSX 10.5, *)
     public lazy var typeEncoding: String? = {
@@ -85,8 +89,13 @@ extension Method {
     ///   - imp: The implemention to set to this method.
     /// - Returns: The previous implementation of the method.
     @available(OSX 10.5, *)
-    public func setImplementation(_ imp: IMP) -> IMP {
+    public func setImplementation(_ imp: ObjectiveC.IMP) -> ObjectiveC.IMP {
         return method_setImplementation(value, imp)
+    }
+    
+    @available(OSX 10.5, *)
+    public func setImplementation(_ imp: IMP) -> IMP {
+        return IMP(setImplementation(imp.value))
     }
 
     /// Exchanges the implementations of two methods.

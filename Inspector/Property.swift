@@ -9,6 +9,10 @@ import ObjectiveC
 /// An class type that represents an Objective-C declared property.
 final public class Property: Inspectable<ObjectiveC.objc_property_t> {
     
+    public override init(_ value: Element) {
+        super.init(value)
+    }
+    
     /// Returns the name of a property.
     @available(OSX 10.5, *)
     public lazy var name: String = {
@@ -50,7 +54,7 @@ final public class Property: Inspectable<ObjectiveC.objc_property_t> {
         return { [weak self] in
             guard
                 self != nil,
-                let value = property_copyAttributeValue(self!.value, Array($0.utf8CString))
+                let value = property_copyAttributeValue(self!.value, $0.cString)
             else { return nil }
             defer {
                 free(value)

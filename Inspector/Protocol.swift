@@ -12,12 +12,16 @@ import ObjectiveC.runtime
 /// So we use ObjectiveC.`Protocol` instand
 final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     
+    public override init(_ value: Element) {
+        super.init(value)
+    }
+    
     /// Returns a specified protocol.
     ///
     /// - Parameter name: The name of a protocol.
     @available(iOS 2.0, *)
     public init?(_ name: String) {
-        guard let p = objc_getProtocol(Array(name.utf8CString)) else {
+        guard let p = objc_getProtocol(name.cString) else {
             return nil
         }
         super.init(p)
@@ -67,10 +71,18 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - isInstance: A Boolean value that indicates whether aSel is an instance method.
     /// - Returns: An \c objc_method_description structure that describes the method specified by \e aSel, \e isRequiredMethod, and \e isInstanceMethod for the protocol \e p. If the protocol does not contain the specified method, returns an \c objc_method_description structure with the value \c {NULL, \c NULL}.
     @available(iOS 2.0, *)
-    public func getMethodDescription(_ aSel: Selector,
+    public func getMethodDescription(_ aSel: ObjectiveC.Selector,
                                      isRequired: Bool,
                                      isInstance: Bool) -> objc_method_description {
         return protocol_getMethodDescription(value, aSel, isRequired, isInstance)
+    }
+    
+    @available(iOS 2.0, *)
+    
+    public func getMethodDescription(_ aSel: Selector,
+                                     isRequired: Bool,
+                                     isInstance: Bool) -> objc_method_description {
+        return protocol_getMethodDescription(value, aSel.value, isRequired, isInstance)
     }
     
     /// Returns an array of method descriptions of methods meeting a given specification for a given protocol.
@@ -128,7 +140,11 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
             buffer[count] = list[count]
             count -= 1
         }
-        return buffer as? [objc_property_t]
+        #if swift(>=4.0)
+            return buffer
+        #else
+            return buffer.flatMap { $0 }
+        #endif
     }
     
     @available(iOS 10.0, *)
@@ -154,7 +170,11 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
             buffer[count] = list[count]
             count -= 1
         }
-        return buffer as? [objc_property_t]
+        #if swift(>=4.0)
+            return buffer
+        #else
+            return buffer.flatMap { $0 }
+        #endif
     }
     
     /// Returns an array of the protocols adopted by a protocol.
@@ -179,7 +199,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// - Parameter name: Protocol name
     @available(iOS 4.3, *)
     public init?(allocate name: String) {
-        guard let ret = objc_allocateProtocol(Array(name.utf8CString)) else {
+        guard let ret = objc_allocateProtocol(name.cString) else {
             return nil
         }
         super.init(ret)
@@ -199,11 +219,20 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - isRequired: YES if the method is not an optional method.
     ///   - isInstance: YES if the method is an instance method.
     @available(iOS 4.3, *)
-    public func addMethodDescription(_ name: Selector,
-                                     types: UnsafePointer<Int8>?,
+    @inline(__always)
+    public func addMethodDescription(_ name: ObjectiveC.Selector,
+                                     types: String?,
                                      isRequired: Bool,
                                      isInstance: Bool) {
-        protocol_addMethodDescription(value, name, types, isRequired, isInstance)
+        protocol_addMethodDescription(value, name, types?.cString, isRequired, isInstance)
+    }
+    
+    @available(iOS 4.3, *)
+    public func addMethodDescription(_ sel: Selector,
+                                     types: String?,
+                                     isRequired: Bool,
+                                     isInstance: Bool) {
+        addMethodDescription(sel.value, types: types, isRequired: isRequired, isInstance: isInstance)
     }
     
     /// Adds an incorporated protocol to another protocol. The protocol being added to must still be under construction, while the additional protocol must be already constructed.
