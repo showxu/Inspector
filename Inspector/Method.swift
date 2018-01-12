@@ -9,10 +9,6 @@ import ObjectiveC.runtime
 /// An class type that represents an instance Method.
 final public class Method: Inspectable<ObjectiveC.Method> {
     
-    public override init(_ value: Element) {
-        super.init(value)
-    }
-    
     /// Returns the name of a method.
     public lazy var name: Selector = {
         return Selector(method_getName(self.value))

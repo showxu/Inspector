@@ -9,10 +9,6 @@ import ObjectiveC.runtime
 
 final public class IMP: Inspectable<ObjectiveC.IMP>  {
     
-    public override init(_ value: Element) {
-        super.init(value)
-    }
-
     ///  Creates a pointer to a function that will call the block
     ///  when the method is called.
     ///

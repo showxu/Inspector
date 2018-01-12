@@ -3,13 +3,22 @@
 //  Inspector
 //
 
-public class Inspectable<T> {
+public protocol InspectableProtocol {
     
-    public typealias Element = T
+    associatedtype Element
+    
+    var value: Element { get }
+    
+    init(_ value: Element)
+}
+
+public class Inspectable<T>: InspectableProtocol {
     
     public internal(set) var value: Element
     
-    public init(_ value: Element) {
+    public typealias Element = T
+    
+    public required init(_ value: Element) {
         self.value = value
     }
 }

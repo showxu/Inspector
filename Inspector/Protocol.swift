@@ -12,30 +12,26 @@ import ObjectiveC.runtime
 /// So we use ObjectiveC.`Protocol` instand
 final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     
-    public override init(_ value: Element) {
-        super.init(value)
-    }
-    
     /// Creates a new protocol instance that cannot be used until registered with \c objc_registerProtocol()
     ///
     /// - Parameter name: Protocol name
     @available(iOS 4.3, *)
-    public init?(allocate name: String) {
+    public convenience init?(allocate name: String) {
         guard let p = objc_allocateProtocol(name.cString) else {
             return nil
         }
-        super.init(p)
+        self.init(p)
     }
     
     /// Returns a specified protocol.
     ///
     /// - Parameter name: The name of a protocol.
     @available(iOS 2.0, *)
-    public init?(_ name: String) {
+    public convenience init?(_ name: String) {
         guard let p = objc_getProtocol(name.cString) else {
             return nil
         }
-        super.init(p)
+        self.init(p)
     }
     
     /// Returns a specified protocol, or creates a new protocol instance if no named protocol could be found.
@@ -176,14 +172,16 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         #endif
     }
     
-    @available(iOS 10.0, *)
-    
     /// Returns an array of properties declared by a protocol.
     ///
     /// - Parameters:
     ///   - isRequired: \c YES returns required properties, \c NO returns optional properties.
     ///   - isInstance: \c YES returns instance properties, \c NO returns class properties.
-    /// - Returns: A C array of pointers of type \c objc_property_t describing the properties declared by \e proto. Any properties declared by other protocols adopted by this protocol are not included. The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free(). If the protocol declares no matching properties, \c NULL is returned and \c *outCount is \c 0.
+    /// - Returns: A C array of pointers of type \c objc_property_t describing the properties declared by \e proto.
+    ///     Any properties declared by other protocols adopted by this protocol are not included. The array contains
+    ///     \c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free().
+    ///     If the protocol declares no matching properties, \c NULL is returned and \c *outCount is \c 0.
+    @available(iOS 10.0, *)
     public func getPropertyList(isRequired: Bool,
                                 isInstance: Bool) -> [objc_property_t]? {
         var outCount = UInt32(0)
@@ -208,7 +206,9 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     
     /// Returns an array of the protocols adopted by a protocol.
     ///
-    /// - Returns: A C array of protocols adopted by \e proto. The array contains \e *outCount pointers followed by a \c NULL terminator. You must free the array with \c free(). If the protocol declares no properties, \c NULL is returned and \c *outCount is \c 0.
+    /// - Returns: A C array of protocols adopted by \e proto. The array contains \e *outCount pointers followed
+    ///     by a \c NULL terminator. You must free the array with \c free(). If the protocol declares no properties,
+    ///     \c NULL is returned and \c *outCount is \c 0.
     public func getProtocolList() -> [Element]? {
         var outCount = UInt32(0)
         guard let list = protocol_copyProtocolList(value, &outCount) else {

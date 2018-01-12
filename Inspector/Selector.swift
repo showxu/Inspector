@@ -8,11 +8,7 @@ import ObjectiveC.runtime
 
 /// An class type that represents an Objective-C declared Selector
 final public class Selector: Inspectable<ObjectiveC.Selector>  {
-    
-    public override init(_ value: Element) {
-        super.init(value)
-    }
-    
+        
     /// Returns the name of the method specified by a given selector.
     @available(OSX 10.0, *)
     public lazy var name: String = {

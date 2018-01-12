@@ -9,10 +9,6 @@ import ObjectiveC.runtime
 /// An class type that represents an Objective-C class.
 final public class Class: Inspectable<Swift.AnyClass> {
     
-    override public init(_ value: Element) {
-        super.init(value)
-    }
-
     /// Returns the class definition of a specified class.
     ///
     /// - Parameter name: The name of the class to look up.
@@ -27,10 +23,15 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Parameters:
     ///   - name: The name of the class to look up.
     ///   - isMeta: Specify the named class is meta or not
-    /// - note \c objc_getClass is different from \c objc_lookUpClass in that if the class is not registered, \c objc_getClass calls the class handler callback and then checks a second time to see whether the class is registered. \c objc_lookUpClass does not call the class handler callback.
-    /// If the definition for the named class is not registered, this function calls the class handler. callback and then checks a second time to see if the class is registered. However, every class. definition must have a valid metaclass definition, and so the metaclass definition is always returned, whether it’s valid or not.
+    /// - Note: \c objc_getClass is different from \c objc_lookUpClass in that if the class is not registered,
+    ///     \c objc_getClass calls the class handler callback and then checks a second time to see whether
+    ///     the class is registered. \c objc_lookUpClass does not call the class handler callback.
+    /// - Note: If the definition for the named class is not registered, this function calls the class handler.
+    ///     callback and then checks a second time to see if the class is registered. However, every class.
+    ///     definition must have a valid metaclass definition, and so the metaclass definition is always returned,
+    ///     whether it’s valid or not.
     @available(iOS 2.0, *)
-    public init?(_ name: String, isMeta: Bool = false) {
+    public convenience init?(_ name: String, isMeta: Bool) {
         let getCls: ((String) -> Element?) = {
             let cStr = $0.cString
             return (isMeta ? objc_getMetaClass(cStr) : objc_getClass(cStr)) as? Element
@@ -38,59 +39,44 @@ final public class Class: Inspectable<Swift.AnyClass> {
         guard let cls = getCls(name) else {
             return nil
         }
-        super.init(cls)
+        self.init(cls)
     }
     
-    /**
-     * Returns the class definition of a specified class.
-     *
-     * @param name The name of the class to look up.
-     *
-     * @return The Class object for the named class, or \c nil if the class
-     *  is not registered with the Objective-C runtime.
-     *
-     * @note \c objc_getClass is different from this function in that if the class is not
-     *  registered, \c objc_getClass calls the class handler callback and then checks a second
-     *  time to see whether the class is registered. This function does not call the class handler callback.
-     */
+    /// Returns the class definition of a specified class.
+    ///
+    /// - Parameter name: The name of the class to look up.
+    /// - Returns: The Class object for the named class, or \c nil if the class
+    ///     is not registered with the Objective-C runtime.
+    /// - Note: \c objc_getClass is different from this function in that if the class is not
+    ///     registered, \c objc_getClass calls the class handler callback and then checks a second
+    ///     time to see whether the class is registered. This function does not call the class handler callback.
     @available(iOS 2.0, *)
-    public class func lookUp(_ name: String) -> Self? {
+    public convenience init?(lookUp name: String) {
         guard let cls = objc_lookUpClass(name.cString) else {
             return nil
         }
-        return self.init(cls)
+        self.init(cls)
     }
     
     /// Returns the class definition of a specified class.
     ///
     /// - Parameter name: The name of the class to look up.
     /// - Returns: The Class object for the named class.
-    /// - note This function is the same as \c objc_getClass, but kills the process if the class is not found.
-    /// - note This function is used by ZeroLink, where failing to find a class would be a compile-time link error without ZeroLink.
+    /// - Note: This function is the same as \c objc_getClass, but kills the process if the class is not found.
+    /// - Note: This function is used by ZeroLink, where failing to find a class would be a compile-time link error without ZeroLink.
     @available(iOS 2.0, *)
-    public class func getRequiredClass(_ name: String) -> Self {
-        return self.init(objc_getRequiredClass(name.cString))
+    public convenience init(requiredClass name: String) {
+        self.init(objc_getRequiredClass(name.cString))
     }
     
-    /**
-     * Obtains the list of registered class definitions.
-     *
-     * @param buffer An array of \c Class values. On output, each \c Class value points to
-     *  one class definition, up to either \e bufferCount or the total number of registered classes,
-     *  whichever is less. You can pass \c NULL to obtain the total number of registered class
-     *  definitions without actually retrieving any class definitions.
-     * @param bufferCount An integer value. Pass the number of pointers for which you have allocated space
-     *  in \e buffer. On return, this function fills in only this number of elements. If this number is less
-     *  than the number of registered classes, this function returns an arbitrary subset of the registered classes.
-     *
-     * @return An integer value indicating the total number of registered classes.
-     *
-     * @note The Objective-C runtime library automatically registers all the classes defined in your source code.
-     *  You can create class definitions at runtime and register them with the \c objc_addClass function.
-     *
-     * @warning You cannot assume that class objects you get from this function are classes that inherit from \c NSObject,
-     *  so you cannot safely call any methods on such classes without detecting that the method is implemented first.
-     */
+    /// Obtains the list of registered class definitions.
+    ///
+    /// - Returns: An integer value indicating the total number of registered classes.
+    /// - Note: The Objective-C runtime library automatically registers all the classes defined in your source code.
+    ///     You can create class definitions at runtime and register them with the \c objc_addClass function.
+    /// - Warning: You cannot assume that class objects you get from this function are classes that inherit
+    ///     from \c NSObject, so you cannot safely call any methods on such classes without detecting
+    ///     that the method is implemented first.
     @available(iOS 2.0, *)
     public func getClassList() -> [Element]? {
         var outCount = UInt32(0)
@@ -331,19 +317,12 @@ final public class Class: Inspectable<Swift.AnyClass> {
         return class_conformsToProtocol(value, aProtocol)
     }
     
-    /**
-     * Describes the protocols adopted by a class.
-     *
-     * @param cls The class you want to inspect.
-     * @param outCount On return, contains the length of the returned array.
-     *  If outCount is NULL, the length is not returned.
-     *
-     * @return An array of pointers of type Protocol* describing the protocols adopted
-     *  by the class. Any protocols adopted by superclasses or other protocols are not included.
-     *  The array contains *outCount pointers followed by a NULL terminator. You must free the array with free().
-     *
-     *  If cls adopts no protocols, or cls is Nil, returns NULL and *outCount is 0.
-     */
+    /// Describes the protocols adopted by a class.
+    ///
+    /// - Returns: An array of pointers of type Protocol* describing the protocols adopted
+    ///     by the class. Any protocols adopted by superclasses or other protocols are not included.
+    ///     The array contains *outCount pointers followed by a NULL terminator. You must free the array with free().
+    /// - Note: If cls adopts no protocols, or cls is Nil, returns NULL and *outCount is 0.
     @available(iOS 2.0, *)
     public func getProtocolList() -> [Protocol]? {
         var outCount = UInt32(0)
@@ -413,10 +392,6 @@ final public class Class: Inspectable<Swift.AnyClass> {
         }
     }
     
-
-    
-    @available(iOS 2.0, *)
-    
     /// Adds a new method to a class with a given name and implementation.
     ///
     /// - Parameters:
@@ -428,6 +403,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Note class_addMethod will add an override of a superclass's implementation,
     ///     but will not replace an existing implementation in this class.
     ///     To change an existing implementation, use method_setImplementation.
+    @available(iOS 2.0, *)
     public func addMethod(_ name: ObjectiveC.Selector,
                           imp: ObjectiveC.IMP,
                           types: String?) -> Bool {
@@ -537,6 +513,9 @@ final public class Class: Inspectable<Swift.AnyClass> {
     public func createInstance(_ extraBytes: Int) -> Any? {
         return class_createInstance(value, extraBytes)
     }
+}
+
+extension Class {
     
     /// Creates a new class and metaclass, or Nil if the class could not be created (for example, the desired name is already in use).
     ///
@@ -552,11 +531,11 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Note Instance methods and instance variables should be added to the class itself.
     ///     Class methods should be added to the metaclass.
     @available(iOS 2.0, *)
-    public init?(_ superclass: Swift.AnyClass?, _ name: String, _ extraBytes: Int) {
+    public convenience init?(_ superclass: Swift.AnyClass?, _ name: String, _ extraBytes: Int) {
         guard let cls = objc_allocateClassPair(superclass, name.cString, extraBytes) else {
             return nil
         }
-        super.init(cls)
+        self.init(cls)
     }
     
     /// Registers a class that was allocated using \c objc_allocateClassPair.
