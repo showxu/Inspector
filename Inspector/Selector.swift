@@ -71,3 +71,12 @@ extension Selector: Equatable, Hashable {
     }
 }
 
+extension Selector: ExpressibleByStringLiteral {
+
+    public typealias StringLiteralType = String
+    
+    public convenience init(stringLiteral value: StringLiteralType) {
+        self.init(uid: value)
+    }
+}
+

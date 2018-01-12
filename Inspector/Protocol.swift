@@ -16,6 +16,17 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         super.init(value)
     }
     
+    /// Creates a new protocol instance that cannot be used until registered with \c objc_registerProtocol()
+    ///
+    /// - Parameter name: Protocol name
+    @available(iOS 4.3, *)
+    public init?(allocate name: String) {
+        guard let p = objc_allocateProtocol(name.cString) else {
+            return nil
+        }
+        super.init(p)
+    }
+    
     /// Returns a specified protocol.
     ///
     /// - Parameter name: The name of a protocol.
@@ -25,6 +36,24 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
             return nil
         }
         super.init(p)
+    }
+    
+    /// Returns a specified protocol, or creates a new protocol instance if no named protocol could be found.
+    ///
+    /// - Parameters:
+    ///   - name: Protocol name
+    ///   - allocate: If create a new protocol or not if no named protocol could be found.
+    @available(iOS 4.3, *)
+    public convenience init?(_ name: String, allocate: Bool = false) {
+        let str = name.cString
+        guard objc_getProtocol(str) != nil else {
+            guard allocate else {
+                return nil
+            }
+            self.init(allocate: name)
+            return
+        }
+        self.init(name)
     }
 
     /// Returns an array of all the protocols known to the runtime.
@@ -194,17 +223,6 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         return buffer
     }
     
-    /// Creates a new protocol instance that cannot be used until registered with \c objc_registerProtocol()
-    ///
-    /// - Parameter name: Protocol name
-    @available(iOS 4.3, *)
-    public init?(allocate name: String) {
-        guard let ret = objc_allocateProtocol(name.cString) else {
-            return nil
-        }
-        super.init(ret)
-    }
-    
     /// Registers a newly constructed protocol with the runtime. The protocol will be ready for use and is immutable after this.
     @available(iOS 4.3, *)
     public func register() {
@@ -258,6 +276,15 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
                             isRequired: Bool,
                             isInstance: Bool) {
         protocol_addProperty(value, name, attributes, attributeCount, isRequired, isInstance)
+    }
+}
+
+extension Protocol: ExpressibleByStringLiteral {
+    
+    public typealias StringLiteralType = String
+    
+    public convenience init(stringLiteral value: StringLiteralType) {
+        self.init(value, allocate: true)!
     }
 }
 
