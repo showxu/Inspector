@@ -28,14 +28,17 @@ final public class Property: Inspectable<ObjectiveC.objc_property_t> {
     /// Returns an array of property attributes for a property.
     @available(OSX 10.7, *)
     public var attributeList: [objc_property_attribute_t]? {
-        var count: UInt32 = 0
-        guard let list = property_copyAttributeList(value, &count) else { return nil }
+        var outCount: UInt32 = 0
+        guard let list = property_copyAttributeList(value, &outCount) else {
+            return nil
+        }
         defer {
             free(list)
         }
-        var buffer: [objc_property_attribute_t] = []
-        while count > 0 {
-            buffer.append(list[Int(count)])
+        var count = Int(outCount)
+        var buffer = Array(repeating: list.pointee, count: count)
+        while count >= 0 {
+            buffer[count] = list[count]
             count -= 1
         }
         return buffer

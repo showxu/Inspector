@@ -20,6 +20,8 @@
 		33DF09D92007B31B000784D7 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09BC2007A34E000784D7 /* Category.swift */; };
 		33DF09DA2007B31B000784D7 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09BE2007A34E000784D7 /* Property.swift */; };
 		33DF09DC2007B3ED000784D7 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09C42007A616000784D7 /* Protocol.swift */; };
+		33DF09E1200863B5000784D7 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09E0200863B4000784D7 /* Class.swift */; };
+		33DF09E2200863B5000784D7 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DF09E0200863B4000784D7 /* Class.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,7 @@
 		33DF09BE2007A34E000784D7 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Inspector/Property.swift; sourceTree = "<group>"; };
 		33DF09C42007A616000784D7 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Protocol.swift; path = Inspector/Protocol.swift; sourceTree = "<group>"; };
 		33DF09CE2007B284000784D7 /* Inspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		33DF09E0200863B4000784D7 /* Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Class.swift; path = Inspector/Class.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				33DF09BB2007A34E000784D7 /* Inspector.swift */,
+				33DF09E0200863B4000784D7 /* Class.swift */,
 				33DF09BA2007A34E000784D7 /* Method.swift */,
 				33DF09BD2007A34E000784D7 /* Ivar.swift */,
 				33DF09BC2007A34E000784D7 /* Category.swift */,
@@ -214,6 +218,7 @@
 				33DF09C32007A34E000784D7 /* Property.swift in Sources */,
 				33DF09BF2007A34E000784D7 /* Method.swift in Sources */,
 				33DF09C02007A34E000784D7 /* Inspector.swift in Sources */,
+				33DF09E1200863B5000784D7 /* Class.swift in Sources */,
 				33DF09C12007A34E000784D7 /* Category.swift in Sources */,
 				33DF09C22007A34E000784D7 /* Ivar.swift in Sources */,
 				33DF09C62007A716000784D7 /* Protocol.swift in Sources */,
@@ -227,6 +232,7 @@
 				33DF09DA2007B31B000784D7 /* Property.swift in Sources */,
 				33DF09D72007B31B000784D7 /* Method.swift in Sources */,
 				33DF09D62007B31B000784D7 /* Inspector.swift in Sources */,
+				33DF09E2200863B5000784D7 /* Class.swift in Sources */,
 				33DF09D82007B31B000784D7 /* Ivar.swift in Sources */,
 				33DF09D92007B31B000784D7 /* Category.swift in Sources */,
 				33DF09DC2007B3ED000784D7 /* Protocol.swift in Sources */,

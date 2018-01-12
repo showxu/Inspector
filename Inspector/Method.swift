@@ -11,6 +11,7 @@ final public class Method: Inspectable<ObjectiveC.Method> {
     
     /// Returns the name of a method.
     public lazy var name: Selector  = {
+        class_getName(<#T##cls: AnyClass!##AnyClass!#>)
         return  method_getName(self.value)
     }()
     
@@ -69,7 +70,7 @@ extension Method {
     
     @available(OSX 10.5, *)
     @inline(__always)
-    final public func getDescription() -> objc_method_description {
+    final public func getMethodDescription() -> objc_method_description {
         #if swift(>=4.0)
             let buffer = method_getDescription(value)
         #else
@@ -112,7 +113,7 @@ extension Method {
 extension Method: CustomStringConvertible  {
 
     public var description: String {
-        let descRep = getDescription()
+        let descRep = getMethodDescription()
         let desc = """
             \(String(describing: descRep.name))
             \(String(describing: descRep.types))
