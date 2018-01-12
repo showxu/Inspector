@@ -11,7 +11,6 @@ final public class Method: Inspectable<ObjectiveC.Method> {
     
     /// Returns the name of a method.
     public lazy var name: Selector  = {
-        class_getName(<#T##cls: AnyClass!##AnyClass!#>)
         return  method_getName(self.value)
     }()
     
