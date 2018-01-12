@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33C630E020089E75002F7CB8 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C630DF20089E75002F7CB8 /* Object.swift */; };
+		33C630E120089E75002F7CB8 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C630DF20089E75002F7CB8 /* Object.swift */; };
 		33CFFC8B2008986900D8F11D /* IMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CFFC8A2008986800D8F11D /* IMP.swift */; };
 		33CFFC8C2008986900D8F11D /* IMP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CFFC8A2008986800D8F11D /* IMP.swift */; };
 		33DF09B82007A32B000784D7 /* Inspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 33DF09B62007A32B000784D7 /* Inspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33C630DF20089E75002F7CB8 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Object.swift; path = Inspector/Object.swift; sourceTree = "<group>"; };
 		33CFFC8A2008986800D8F11D /* IMP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IMP.swift; path = Inspector/IMP.swift; sourceTree = "<group>"; };
 		33DF097D2007606C000784D7 /* Inspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DF09B62007A32B000784D7 /* Inspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Inspector.h; path = Inspector/Inspector.h; sourceTree = "<group>"; };
@@ -93,12 +96,13 @@
 			isa = PBXGroup;
 			children = (
 				33DF09BB2007A34E000784D7 /* Inspector.swift */,
+				33C630DF20089E75002F7CB8 /* Object.swift */,
+				33DF09E0200863B4000784D7 /* Class.swift */,
 				33DF09BA2007A34E000784D7 /* Method.swift */,
 				33DF09BD2007A34E000784D7 /* Ivar.swift */,
-				33DF09E0200863B4000784D7 /* Class.swift */,
-				33DF09BC2007A34E000784D7 /* Category.swift */,
 				33DF09BE2007A34E000784D7 /* Property.swift */,
 				33DF09C42007A616000784D7 /* Protocol.swift */,
+				33DF09BC2007A34E000784D7 /* Category.swift */,
 				33DF09E32008903F000784D7 /* Selector.swift */,
 				33CFFC8A2008986800D8F11D /* IMP.swift */,
 			);
@@ -223,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C630E020089E75002F7CB8 /* Object.swift in Sources */,
 				33DF09C32007A34E000784D7 /* Property.swift in Sources */,
 				33DF09BF2007A34E000784D7 /* Method.swift in Sources */,
 				33DF09E42008903F000784D7 /* Selector.swift in Sources */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C630E120089E75002F7CB8 /* Object.swift in Sources */,
 				33DF09DA2007B31B000784D7 /* Property.swift in Sources */,
 				33DF09D72007B31B000784D7 /* Method.swift in Sources */,
 				33DF09E52008903F000784D7 /* Selector.swift in Sources */,
