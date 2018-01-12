@@ -4,6 +4,7 @@
 //
 //
 
+import Foundation.NSObjCRuntime
 import ObjectiveC.runtime
 
 /// An class type that represents an Objective-C class.
@@ -463,9 +464,24 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Note The instance variable's minimum alignment in bytes is 1<<align. The minimum alignment of an instance
     ///     variable depends on the ivar's type and the machine architecture.
     ///     For variables of any pointer type, pass log2(sizeof(pointer_type)).
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
+    @inline(__always)
+    public func addIvar(_ name: String,
+                        types: String) -> Bool {
+        var size = 0
+        var alignment = 0
+        NSGetSizeAndAlignment(types.utf8CString.baseAddress!, &size, &alignment)
+        return class_addIvar(value,
+                             name.utf8CString.baseAddress!,
+                             size,
+                             UInt8(log2(Double(alignment))),
+                             types.utf8CString.baseAddress)
+    }
+    
     @available(iOS 2.0, *)
-    public func addIvar( _ name: String, _ size: Int, _ alignment: UInt8, _ types: UnsafePointer<Int8>?) -> Bool {
-        return class_addIvar(value, name.utf8CString.baseAddress!, size, alignment, types)
+    public func addIvar(_ ivar: Ivar) -> Bool {
+        return addIvar(ivar.name!,
+                       types: ivar.typeEncoding!)
     }
     
     /// Adds a protocol to a class.

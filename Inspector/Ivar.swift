@@ -15,14 +15,35 @@ final public class Ivar: Inspectable<ObjectiveC.Ivar> {
         return name != nil ? String(cString: name!) : nil
     }()
     
-    /// Returns the type string of an instance variable.
+    /// Returns the offset of an instance variable.
     public lazy var offset: Int = {
         return ivar_getOffset(self.value)
     }()
     
-    /// Returns the offset of an instance variable.
+    /// Returns the type string of an instance variable.
     public lazy var typeEncoding: String? = {
         let encode = ivar_getTypeEncoding(self.value)
         return encode != nil ? String(cString: encode!) : nil
     }()
 }
+
+extension Ivar: CustomStringConvertible {
+    
+    public var description: String {
+        return """
+            Ivar: \(String(describing: name))
+            Encoding: \(String(describing: typeEncoding))
+            Offset: \(offset)
+            """
+    }
+}
+
+extension Ivar: CustomDebugStringConvertible {
+    
+    public var debugDescription: String {
+        return description
+    }
+}
+
+
+

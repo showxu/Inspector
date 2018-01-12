@@ -68,7 +68,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33C630E22008F137002F7CB8 /* Inspectable */ = {
+		33C630E22008F137002F7CB8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				33DF09BB2007A34E000784D7 /* Inspectable.swift */,
@@ -82,7 +82,7 @@
 				33DF09E32008903F000784D7 /* Selector.swift */,
 				33CFFC8A2008986800D8F11D /* IMP.swift */,
 			);
-			name = Inspectable;
+			name = Core;
 			sourceTree = "<group>";
 		};
 		33C630E32008F169002F7CB8 /* Extensions */ = {
@@ -123,7 +123,7 @@
 		33DF0989200760FB000784D7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				33C630E22008F137002F7CB8 /* Inspectable */,
+				33C630E22008F137002F7CB8 /* Core */,
 				33C630E32008F169002F7CB8 /* Extensions */,
 			);
 			name = Source;
