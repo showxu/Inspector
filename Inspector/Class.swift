@@ -33,7 +33,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     @available(iOS 2.0, *)
     public convenience init?(_ name: String, isMeta: Bool) {
         let getCls: ((String) -> Element?) = {
-            let cStr = $0.cString
+            let cStr = $0.utf8CString.baseAddress!
             return (isMeta ? objc_getMetaClass(cStr) : objc_getClass(cStr)) as? Element
         }
         guard let cls = getCls(name) else {
@@ -52,7 +52,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///     time to see whether the class is registered. This function does not call the class handler callback.
     @available(iOS 2.0, *)
     public convenience init?(lookUp name: String) {
-        guard let cls = objc_lookUpClass(name.cString) else {
+        guard let cls = objc_lookUpClass(name.utf8CString.baseAddress!) else {
             return nil
         }
         self.init(cls)
@@ -66,7 +66,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Note: This function is used by ZeroLink, where failing to find a class would be a compile-time link error without ZeroLink.
     @available(iOS 2.0, *)
     public convenience init(requiredClass name: String) {
-        self.init(objc_getRequiredClass(name.cString))
+        self.init(objc_getRequiredClass(name.utf8CString.baseAddress!))
     }
     
     /// Obtains the list of registered class definitions.
@@ -143,7 +143,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: Inspectable Ivar
     @available(iOS 2.0, *)
     public func getInstanceVariable(_ name: String) -> Ivar? {
-        return Ivar( class_getInstanceVariable(value, name.cString)!)
+        return Ivar(class_getInstanceVariable(value, name.utf8CString.baseAddress!)!)
     }
 
     /// Returns the Ivar for a specified class variable of a given class.
@@ -152,7 +152,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: Inspectable Ivar
     @available(iOS 2.0, *)
     public func getClassVariable(_ name: String) -> Ivar? {
-        return Ivar(class_getClassVariable(value, name.cString)!)
+        return Ivar(class_getClassVariable(value, name.utf8CString.baseAddress!)!)
     }
     
     /// Describes the instance variables declared by a class.
@@ -345,7 +345,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: Inspectable property
     @available(iOS 2.0, *)
     public func getProperty(_ name: String) -> Property? {
-        guard let p = class_getProperty(value, name.cString) else {
+        guard let p = class_getProperty(value, name.utf8CString.baseAddress!) else {
             return nil
         }
         return Property(p)
@@ -374,21 +374,21 @@ final public class Class: Inspectable<Swift.AnyClass> {
     
     ///  Ivar layout for a given class.
     @available(iOS 2.0, *)
-    public var ivarLayout: String? {
+    public var ivarLayout: UnsafePointer<UInt8>? {
         get {
-            return String(cString: class_getIvarLayout(value)!)
+            return class_getIvarLayout(value)
         } set {
-            class_setIvarLayout(value, newValue?.cString.map{ UInt8($0) })
+            class_setIvarLayout(value, newValue)
         }
     }
 
     /// Layout for weak Ivars for a given class.
     @available(iOS 2.0, *)
-    public var weakIvarLayout: String? {
+    public var weakIvarLayout: UnsafePointer<UInt8>? {
         get {
-            return String(cString: class_getWeakIvarLayout(value)!)
+            return class_getWeakIvarLayout(value)
         } set {
-            class_setWeakIvarLayout(value, newValue?.cString.map{ UInt8($0) })
+            class_setWeakIvarLayout(value, newValue)
         }
     }
     
@@ -407,7 +407,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     public func addMethod(_ name: ObjectiveC.Selector,
                           imp: ObjectiveC.IMP,
                           types: String?) -> Bool {
-        return class_addMethod(value, name, imp, types?.cString)
+        return class_addMethod(value, name, imp, types?.utf8CString.baseAddress)
     }
     
     public func addMethod(_ sel: Selector,
@@ -435,7 +435,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     public func replaceMethod(_ name: ObjectiveC.Selector,
                               imp: ObjectiveC.IMP,
                               types: String?) -> ObjectiveC.IMP? {
-        return class_replaceMethod(value, name, imp, types?.cString)
+        return class_replaceMethod(value, name, imp, types?.utf8CString.baseAddress)
     }
     
     @available(iOS 2.0, *)
@@ -465,7 +465,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///     For variables of any pointer type, pass log2(sizeof(pointer_type)).
     @available(iOS 2.0, *)
     public func addIvar( _ name: String, _ size: Int, _ alignment: UInt8, _ types: UnsafePointer<Int8>?) -> Bool {
-        return class_addIvar(value, name.cString, size, alignment, types)
+        return class_addIvar(value, name.utf8CString.baseAddress!, size, alignment, types)
     }
     
     /// Adds a protocol to a class.
@@ -488,7 +488,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///     (for example, the class already has that property).
     @available(iOS 4.3, *)
     public func addProperty(_ name: String,  _ attributes: UnsafePointer<objc_property_attribute_t>?, _ attributeCount: UInt32) -> Bool {
-        return class_addProperty(value, name.cString, attributes, attributeCount)
+        return class_addProperty(value, name.utf8CString.baseAddress!, attributes, attributeCount)
     }
 
     /// Replace a property of a class.
@@ -499,7 +499,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///   - attributeCount: The number of attributes in \e attributes.
     @available(iOS 4.3, *)
     public func replaceProperty(_ name: String, _ attributes: UnsafePointer<objc_property_attribute_t>?, _ attributeCount: UInt32) {
-        class_replaceProperty(value, name.cString, attributes, attributeCount)
+        class_replaceProperty(value, name.utf8CString.baseAddress!, attributes, attributeCount)
     }
     
     /// Creates an instance of a class, allocating memory for the class in the
@@ -532,7 +532,7 @@ extension Class {
     ///     Class methods should be added to the metaclass.
     @available(iOS 2.0, *)
     public convenience init?(_ superclass: Swift.AnyClass?, _ name: String, _ extraBytes: Int) {
-        guard let cls = objc_allocateClassPair(superclass, name.cString, extraBytes) else {
+        guard let cls = objc_allocateClassPair(superclass, name.utf8CString.baseAddress!, extraBytes) else {
             return nil
         }
         self.init(cls)
@@ -552,7 +552,7 @@ extension Class {
     /// - Returns: Duplicated class
     @available(iOS 2.0, *)
     public func duplicate(_ name: String, _ extraBytes: Int) -> Element {
-        return objc_duplicateClass(value, name.cString, extraBytes)
+        return objc_duplicateClass(value, name.utf8CString.baseAddress!, extraBytes)
     }
     
     /// Destroy a class and its associated metaclass.

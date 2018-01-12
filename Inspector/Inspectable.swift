@@ -3,6 +3,7 @@
 //  Inspector
 //
 
+///
 public protocol InspectableProtocol {
     
     associatedtype Element
@@ -12,6 +13,7 @@ public protocol InspectableProtocol {
     init(_ value: Element)
 }
 
+///
 public class Inspectable<T>: InspectableProtocol {
     
     public internal(set) var value: Element
@@ -20,12 +22,5 @@ public class Inspectable<T>: InspectableProtocol {
     
     public required init(_ value: Element) {
         self.value = value
-    }
-}
-
-extension String {
-    
-    public var cString: [CChar] {
-        return Array(utf8CString)
     }
 }

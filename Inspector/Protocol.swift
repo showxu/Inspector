@@ -17,7 +17,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// - Parameter name: Protocol name
     @available(iOS 4.3, *)
     public convenience init?(allocate name: String) {
-        guard let p = objc_allocateProtocol(name.cString) else {
+        guard let p = objc_allocateProtocol(name.utf8CString.baseAddress!) else {
             return nil
         }
         self.init(p)
@@ -28,7 +28,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// - Parameter name: The name of a protocol.
     @available(iOS 2.0, *)
     public convenience init?(_ name: String) {
-        guard let p = objc_getProtocol(name.cString) else {
+        guard let p = objc_getProtocol(name.utf8CString.baseAddress!) else {
             return nil
         }
         self.init(p)
@@ -41,7 +41,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - allocate: If create a new protocol or not if no named protocol could be found.
     @available(iOS 4.3, *)
     public convenience init?(_ name: String, allocate: Bool = false) {
-        let str = name.cString
+        let str = name.utf8CString.baseAddress!
         guard objc_getProtocol(str) != nil else {
             guard allocate else {
                 return nil
@@ -242,7 +242,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
                                      types: String?,
                                      isRequired: Bool,
                                      isInstance: Bool) {
-        protocol_addMethodDescription(value, name, types?.cString, isRequired, isInstance)
+        protocol_addMethodDescription(value, name, types?.utf8CString.baseAddress, isRequired, isInstance)
     }
     
     @available(iOS 4.3, *)

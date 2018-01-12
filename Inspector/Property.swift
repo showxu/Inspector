@@ -50,7 +50,7 @@ final public class Property: Inspectable<ObjectiveC.objc_property_t> {
         return { [weak self] in
             guard
                 self != nil,
-                let value = property_copyAttributeValue(self!.value, $0.cString)
+                let value = property_copyAttributeValue(self!.value, $0.utf8CString.baseAddress!)
             else { return nil }
             defer {
                 free(value)

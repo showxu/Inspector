@@ -24,7 +24,7 @@ final public class Selector: Inspectable<ObjectiveC.Selector>  {
     ///     has already been registered, this function simply returns the selector.
     @available(OSX 10.0, *)
     public convenience init(register name: String) {
-        self.init(sel_registerName(name.cString))
+        self.init(sel_registerName(name.utf8CString.baseAddress!))
     }
     
     /// Registers a method name with the Objective-C runtime system.
@@ -36,7 +36,7 @@ final public class Selector: Inspectable<ObjectiveC.Selector>  {
     ///     observed that many of the callers of this function did not check the return value for \c NULL.
     @available(OSX 10.0, *)
     public convenience init(uid str: String) {
-        self.init(sel_getUid(str.cString))
+        self.init(sel_getUid(str.utf8CString.baseAddress!))
     }
 
     /// Returns a Boolean value that indicates whether two selectors are equal.
