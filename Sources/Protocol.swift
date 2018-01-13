@@ -181,7 +181,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///     Any properties declared by other protocols adopted by this protocol are not included. The array contains
     ///     \c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free().
     ///     If the protocol declares no matching properties, \c NULL is returned and \c *outCount is \c 0.
-    @available(iOS 10.0, *)
+    @available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOS 3.0, *)
     public func getPropertyList(isRequired: Bool,
                                 isInstance: Bool) -> [objc_property_t]? {
         var outCount = UInt32(0)

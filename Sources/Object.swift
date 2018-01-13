@@ -88,7 +88,7 @@ final class Object: Inspectable<Any> {
     ///     are assigned as if they were strong.
     /// - Note \c object_setIvar is faster than \c object_setInstanceVariable if the Ivar
     ///     for the instance variable is already known.
-    @available(OSX 10.12, *)
+    @available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOS 3.0, *)
     @inline(__always)
     public func setIvar(strongDefault ivar: ObjectiveC.Ivar, _ value: Any?) {
         object_setIvarWithStrongDefault(value, ivar, value)
