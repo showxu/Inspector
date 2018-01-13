@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     
   fmwk_name = 'Inspector'
   fmwk_ver = '0.0.1'
-  src_root = Inspector + '/'
+  src_root = 'Sources/'
   src_file_path = src_root + '*.{swift}'
   
   repo_git_host = 'https://github.com/'
@@ -36,6 +36,12 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
+                     An elegant Object-Oriented objc runtime wrapper for Swift.
+                     1. Elegant
+                     2. OOP
+                     3. Inspect
+                     4. runtime
+                     5. Wrapper
                    DESC
 
   s.homepage     = repo_page
