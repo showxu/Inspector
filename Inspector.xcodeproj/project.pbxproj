@@ -63,6 +63,14 @@
 		33C07AD62009FF41008628E1 /* Inspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C07AD42009FF3C008628E1 /* Inspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33C07AD72009FF41008628E1 /* Inspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C07AD42009FF3C008628E1 /* Inspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		33C07AD82009FF42008628E1 /* Inspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 33C07AD42009FF3C008628E1 /* Inspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33C07ADA200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07AD9200A269F008628E1 /* OpaquePointer+Inspector.swift */; };
+		33C07ADB200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07AD9200A269F008628E1 /* OpaquePointer+Inspector.swift */; };
+		33C07ADC200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07AD9200A269F008628E1 /* OpaquePointer+Inspector.swift */; };
+		33C07ADD200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07AD9200A269F008628E1 /* OpaquePointer+Inspector.swift */; };
+		33C07ADF200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07ADE200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift */; };
+		33C07AE0200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07ADE200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift */; };
+		33C07AE1200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07ADE200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift */; };
+		33C07AE2200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07ADE200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +99,8 @@
 		33C07ACD2009FDCB008628E1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		33C07AD32009FF3C008628E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C07AD42009FF3C008628E1 /* Inspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Inspector.h; sourceTree = "<group>"; };
+		33C07AD9200A269F008628E1 /* OpaquePointer+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpaquePointer+Inspector.swift"; sourceTree = "<group>"; };
+		33C07ADE200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObjectiveC.Protocol+Inspector.swift"; sourceTree = "<group>"; };
 		33DF097D2007606C000784D7 /* Inspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33DF09CE2007B284000784D7 /* Inspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Inspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,13 +142,13 @@
 			children = (
 				33C07A992009FD8A008628E1 /* Category.swift */,
 				33C07A9C2009FD8A008628E1 /* Class.swift */,
-				33C07A982009FD8A008628E1 /* IMP.swift */,
 				33C07A9B2009FD8A008628E1 /* Ivar.swift */,
 				33C07A972009FD8A008628E1 /* Method.swift */,
 				33C07A9D2009FD8A008628E1 /* Object.swift */,
 				33C07A952009FD8A008628E1 /* Property.swift */,
 				33C07A9A2009FD8A008628E1 /* Protocol.swift */,
 				33C07A962009FD8A008628E1 /* Selector.swift */,
+				33C07A982009FD8A008628E1 /* IMP.swift */,
 			);
 			name = Inspectable;
 			sourceTree = "<group>";
@@ -183,8 +193,8 @@
 		33C630E22008F137002F7CB8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				33C07A8C2009FD7A008628E1 /* Inspectable.swift */,
 				33C07A8B2009FD7A008628E1 /* InspectableProtocol.swift */,
+				33C07A8C2009FD7A008628E1 /* Inspectable.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -194,6 +204,8 @@
 			children = (
 				33C07AC32009FD90008628E1 /* Array+Inspector.swift */,
 				33C07AC22009FD90008628E1 /* ContiguousArray+Inspector.swift */,
+				33C07AD9200A269F008628E1 /* OpaquePointer+Inspector.swift */,
+				33C07ADE200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -441,10 +453,12 @@
 				33C07AAC2009FD8A008628E1 /* IMP.swift in Sources */,
 				33C07AA42009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AB02009FD8A008628E1 /* Category.swift in Sources */,
+				33C07AE1200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
 				33C07A932009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA82009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC62009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,
 				33C07AC02009FD8A008628E1 /* Object.swift in Sources */,
+				33C07ADC200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */,
 				33C07ACA2009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33C07AB42009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB82009FD8A008628E1 /* Ivar.swift in Sources */,
@@ -461,10 +475,12 @@
 				33C07AAD2009FD8A008628E1 /* IMP.swift in Sources */,
 				33C07AA52009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AB12009FD8A008628E1 /* Category.swift in Sources */,
+				33C07AE2200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
 				33C07A942009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA92009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC72009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,
 				33C07AC12009FD8A008628E1 /* Object.swift in Sources */,
+				33C07ADD200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */,
 				33C07ACB2009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33C07AB52009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB92009FD8A008628E1 /* Ivar.swift in Sources */,
@@ -481,10 +497,12 @@
 				33C07AAB2009FD8A008628E1 /* IMP.swift in Sources */,
 				33C07AA32009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AAF2009FD8A008628E1 /* Category.swift in Sources */,
+				33C07AE0200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
 				33C07A922009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA72009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC52009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,
 				33C07ABF2009FD8A008628E1 /* Object.swift in Sources */,
+				33C07ADB200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */,
 				33C07AC92009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33C07AB32009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB72009FD8A008628E1 /* Ivar.swift in Sources */,
@@ -501,10 +519,12 @@
 				33C07AAA2009FD8A008628E1 /* IMP.swift in Sources */,
 				33C07AA22009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AAE2009FD8A008628E1 /* Category.swift in Sources */,
+				33C07ADF200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
 				33C07A912009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA62009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC42009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,
 				33C07ABE2009FD8A008628E1 /* Object.swift in Sources */,
+				33C07ADA200A269F008628E1 /* OpaquePointer+Inspector.swift in Sources */,
 				33C07AC82009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33C07AB22009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB62009FD8A008628E1 /* Ivar.swift in Sources */,
@@ -556,7 +576,7 @@
 		33C07A112009F52B008628E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -576,7 +596,7 @@
 		33C07A122009F52B008628E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

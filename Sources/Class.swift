@@ -504,9 +504,22 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///   - attributeCount: The number of attributes in \e attributes.
     /// - Returns: \c YES if the property was added successfully, otherwise \c NO
     ///     (for example, the class already has that property).
-    @available(iOS 4.3, *)
-    public func addProperty(_ name: String,  _ attributes: UnsafePointer<objc_property_attribute_t>?, _ attributeCount: UInt32) -> Bool {
-        return class_addProperty(value, name.utf8CString.baseAddress!, attributes, attributeCount)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
+    @inline(__always)
+    public func addProperty(_ name: String,
+                            attributes: [objc_property_attribute_t]?,
+                            attributeCount: Int) -> Bool {
+        return class_addProperty(value,
+                                 name.utf8CString.baseAddress!,
+                                 attributes?.baseAddress,
+                                 UInt32(attributeCount))
+    }
+    
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
+    public func addProperty(_ p: Property) -> Bool {
+        return addProperty(p.name,
+                           attributes: p.attributeList,
+                           attributeCount: p.attributeList?.count ?? 0)
     }
 
     /// Replace a property of a class.
@@ -515,7 +528,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///   - name: The name of the property.
     ///   - attributes: An array of property attributes.
     ///   - attributeCount: The number of attributes in \e attributes.
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     public func replaceProperty(_ name: String, _ attributes: UnsafePointer<objc_property_attribute_t>?, _ attributeCount: UInt32) {
         class_replaceProperty(value, name.utf8CString.baseAddress!, attributes, attributeCount)
     }

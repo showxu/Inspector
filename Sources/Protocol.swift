@@ -15,7 +15,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// Creates a new protocol instance that cannot be used until registered with \c objc_registerProtocol()
     ///
     /// - Parameter name: Protocol name
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     public convenience init?(allocate name: String) {
         guard let p = objc_allocateProtocol(name.utf8CString.baseAddress!) else {
             return nil
@@ -26,7 +26,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// Returns a specified protocol.
     ///
     /// - Parameter name: The name of a protocol.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public convenience init?(_ name: String) {
         guard let p = objc_getProtocol(name.utf8CString.baseAddress!) else {
             return nil
@@ -39,23 +39,24 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// - Parameters:
     ///   - name: Protocol name
     ///   - allocate: If create a new protocol or not if no named protocol could be found.
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     public convenience init?(_ name: String, allocate: Bool = false) {
         let str = name.utf8CString.baseAddress!
-        guard objc_getProtocol(str) != nil else {
-            guard allocate else {
-                return nil
-            }
-            self.init(allocate: name)
-            return
+        var aProtocol = objc_getProtocol(str)
+        if aProtocol != nil && allocate {
+            aProtocol = objc_allocateProtocol(str)
         }
-        self.init(name)
+        guard let p = aProtocol else {
+            return nil
+        }
+        self.init(p)
     }
 
     /// Returns an array of all the protocols known to the runtime.
     ///
-    /// - Returns: A C array of all the protocols known to the runtime. The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the list with \c free().
-    @available(iOS 2.0, *)
+    /// - Returns: A C array of all the protocols known to the runtime. The array contains
+    ///     \c *outCount pointers followed by a \c NULL terminator. You must free the list with \c free().
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public class func getProtocolList() -> [Element]? {
         var outCount = UInt32(0)
         guard let list = objc_copyProtocolList(&outCount) else {
@@ -63,27 +64,29 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
-            count -= 1
+        autoreleasepool {
+            while count >= 0 {
+                buffer[count] = list[count]
+                count -= 1
+            }
         }
         return buffer
     }
     
     /// Returns a Boolean value that indicates whether one protocol conforms to another protocol.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func conforms(to other: Element?) -> Bool {
         return protocol_conformsToProtocol(value, other!)
     }
     
     /// Returns a Boolean value that indicates whether two protocols are equal.
-    @available(iOS 2.0, *)
-    public func isEqual(to other: Element?) -> Bool {
-        return protocol_isEqual(value, other!)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
+    public func isEqual(to other: Element) -> Bool {
+        return value == other
     }
     
     /// Returns the name of a protocol.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public lazy var name: String = {
         return String(cString: protocol_getName(self.value))
     }()
@@ -94,20 +97,24 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - aSel: A selector.
     ///   - isRequired: A Boolean value that indicates whether aSel is a required method.
     ///   - isInstance: A Boolean value that indicates whether aSel is an instance method.
-    /// - Returns: An \c objc_method_description structure that describes the method specified by \e aSel, \e isRequiredMethod, and \e isInstanceMethod for the protocol \e p. If the protocol does not contain the specified method, returns an \c objc_method_description structure with the value \c {NULL, \c NULL}.
-    @available(iOS 2.0, *)
+    /// - Returns: An \c objc_method_description structure that describes the method specified by
+    ///     \e aSel, \e isRequiredMethod, and \e isInstanceMethod for the protocol \e p.
+    ///     If the protocol does not contain the specified method, returns an \c
+    ///     objc_method_description structure with the value \c {NULL, \c NULL}.
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodDescription(_ aSel: ObjectiveC.Selector,
                                      isRequired: Bool,
                                      isInstance: Bool) -> objc_method_description {
         return protocol_getMethodDescription(value, aSel, isRequired, isInstance)
     }
     
-    @available(iOS 2.0, *)
-    
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodDescription(_ aSel: Selector,
                                      isRequired: Bool,
                                      isInstance: Bool) -> objc_method_description {
-        return protocol_getMethodDescription(value, aSel.value, isRequired, isInstance)
+        return getMethodDescription(aSel.value,
+                                    isRequired: isRequired,
+                                    isInstance: isInstance)
     }
     
     /// Returns an array of method descriptions of methods meeting a given specification for a given protocol.
@@ -116,7 +123,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - isRequired: A Boolean value that indicates whether returned methods should be required methods (pass YES to specify required methods).
     ///   - isInstance: isInstanceMethod A Boolean value that indicates whether returned methods should be instance methods (pass YES to specify instance methods).
     /// - Returns: A C array of \c objc_method_description structures containing the names and types of \e p's methods specified by \e isRequiredMethod and \e isInstanceMethod. The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the list with \c free(). If the protocol declares no methods that meet the specification, \c NULL is returned and \c *outCount is 0.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodDescriptionList(isRequired: Bool,
                                          isInstance: Bool) -> [objc_method_description]? {
         var outCount = UInt32(0)
@@ -128,9 +135,11 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
-            count -= 1
+        autoreleasepool {
+            while count >= 0 {
+                buffer[count] = list[count]
+                count -= 1
+            }
         }
         return buffer
     }
@@ -142,7 +151,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - isRequired: \c YES searches for a required property, \c NO searches for an optional property.
     ///   - isInstance: \c YES searches for an instance property, \c NO searches for a class property.
     /// - Returns: The property specified by \e name, \e isRequiredProperty, and \e isInstanceProperty for \e proto, or \c NULL if none of \e proto's properties meets the specification.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getProperty(_ name: String, isRequired: Bool, isInstance: Bool) -> objc_property_t? {
         return protocol_getProperty(value, Array(name.utf8CString), isRequired, isInstance)
     }
@@ -150,7 +159,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// Returns an array of the required instance properties declared by a protocol.
     ///
     /// - Returns: A C array of pointers of type \c objc_property_t describing the properties declared by \e proto. Any properties declared by other protocols adopted by this protocol are not included. The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free(). If the protocol declares no matching properties, \c NULL is returned and \c *outCount is \c 0.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getPropertyList() -> [objc_property_t]? {
         var outCount = UInt32(0)
         guard let list = protocol_copyPropertyList(value, &outCount) else {
@@ -161,9 +170,11 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
-            count -= 1
+        autoreleasepool {
+            while count >= 0 {
+                buffer[count] = list[count]
+                count -= 1
+            }
         }
         #if swift(>=4.0)
             return buffer
@@ -193,9 +204,11 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
-            count -= 1
+        autoreleasepool {
+            while count >= 0 {
+                buffer[count] = list[count]
+                count -= 1
+            }
         }
         #if swift(>=4.0)
             return buffer
@@ -209,6 +222,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// - Returns: A C array of protocols adopted by \e proto. The array contains \e *outCount pointers followed
     ///     by a \c NULL terminator. You must free the array with \c free(). If the protocol declares no properties,
     ///     \c NULL is returned and \c *outCount is \c 0.
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getProtocolList() -> [Element]? {
         var outCount = UInt32(0)
         guard let list = protocol_copyProtocolList(value, &outCount) else {
@@ -216,15 +230,17 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
-            count -= 1
+        autoreleasepool {
+            while count >= 0 {
+                buffer[count] = list[count]
+                count -= 1
+            }
         }
         return buffer
     }
     
     /// Registers a newly constructed protocol with the runtime. The protocol will be ready for use and is immutable after this.
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     public func register() {
         objc_registerProtocol(value)
     }
@@ -236,7 +252,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - types: A C string that represents the method signature.
     ///   - isRequired: YES if the method is not an optional method.
     ///   - isInstance: YES if the method is an instance method.
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     @inline(__always)
     public func addMethodDescription(_ name: ObjectiveC.Selector,
                                      types: String?,
@@ -245,7 +261,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
         protocol_addMethodDescription(value, name, types?.utf8CString.baseAddress, isRequired, isInstance)
     }
     
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     public func addMethodDescription(_ sel: Selector,
                                      types: String?,
                                      isRequired: Bool,
@@ -256,7 +272,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     /// Adds an incorporated protocol to another protocol. The protocol being added to must still be under construction, while the additional protocol must be already constructed.
     ///
     /// - Parameter addition: The protocol you want to incorporate into \e proto, it must be registered.
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     public func addProtocol(_ addition: Element) {
         protocol_addProtocol(value, addition)
     }
@@ -269,7 +285,7 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
     ///   - attributeCount: The number of attributes in \e attributes.
     ///   - isRequired: YES if the property (accessor methods) is not optional.
     ///   - isInstance: YES if the property (accessor methods) are instance methods.
-    @available(iOS 4.3, *)
+    @available(iOS 4.3, macOS 10.7, tvOS 9.0, watchOS 2.0, *)
     public func addProperty(_ name: String,
                             attributes: UnsafePointer<objc_property_attribute_t>?,
                             attributeCount: UInt32,
@@ -281,10 +297,8 @@ final public class Protocol: Inspectable<ObjectiveC.`Protocol`>  {
 
 extension Protocol: ExpressibleByStringLiteral {
     
-    public typealias StringLiteralType = String
-    
-    public convenience init(stringLiteral value: StringLiteralType) {
+    public convenience init(stringLiteral value: String) {
         self.init(value, allocate: true)!
     }
-}
+} 
 

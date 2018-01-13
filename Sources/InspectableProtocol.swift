@@ -14,7 +14,7 @@ public protocol InspectableProtocol {
     init(_ value: Element)
 }
 
-// MARK: - Hashable
+// MARK: - Hashable stub
 extension InspectableProtocol where Element: Hashable {
     
     public var hashValue: Int {
@@ -22,7 +22,7 @@ extension InspectableProtocol where Element: Hashable {
     }
 }
 
-// MARK: - Equatable
+// MARK: - Equatable stub
 extension InspectableProtocol where Element: Equatable {
     
     public static func ==(lhs: Self, rhs: Self) -> Bool {
@@ -30,23 +30,23 @@ extension InspectableProtocol where Element: Equatable {
     }
 }
 
-// MARK: - CustomStringConvertible
+// MARK: - CustomStringConvertible stub
 extension InspectableProtocol where Element: CustomStringConvertible {
     
     public var description: String {
-        return value.description
+        return "\(Element.Type.self): \(value.description)"
     }
 }
 
-// MARK: - CustomDebugStringConvertible
+// MARK: - CustomDebugStringConvertible stub
 extension InspectableProtocol where Element: CustomDebugStringConvertible {
     
     public var debugDescription: String {
-        return value.debugDescription
+        return "\(Element.Type.self): \(value.debugDescription)"
     }
 }
 
-// MARK: - CustomDebugStringConvertible & CustomStringConvertible
+// MARK: - CustomDebugStringConvertible & CustomStringConvertible stub
 extension InspectableProtocol where Element: CustomDebugStringConvertible & CustomStringConvertible {
     
     public var debugDescription: String {
