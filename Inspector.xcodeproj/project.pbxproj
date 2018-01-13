@@ -146,8 +146,8 @@
 		33C079F42009EAD4008628E1 /* Deployment */ = {
 			isa = PBXGroup;
 			children = (
-				33C079F82009EBEE008628E1 /* Inspector.podspec */,
 				33C07A3E2009FA2C008628E1 /* Package.swift */,
+				33C079F82009EBEE008628E1 /* Inspector.podspec */,
 				33C079F52009EB26008628E1 /* .swift-version */,
 				33C079F72009EB26008628E1 /* README.md */,
 				33C079F62009EB26008628E1 /* LICENSE */,
