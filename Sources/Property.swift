@@ -175,7 +175,7 @@ extension Property {
     }
     
     /// The property is eligible for garbage collection.
-    public var gcEligible: Bool {
+    public var isGarbageCollectionEligible: Bool {
         return subAttributes.contains(key: TypeEncoding.gcEligible.rawValue.subString)
     }
 }
