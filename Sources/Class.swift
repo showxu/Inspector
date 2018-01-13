@@ -251,13 +251,15 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Parameter name: A selector.
     /// - Returns: The function pointer that would be called if \c [object name] were called
     ///     with an instance of the class, or \c NULL if \e cls is \c Nil.
-    @available(iOS 2.0, *)
+    #if !(arch(arm) || arch(arm64))
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodImplementation(stret name: ObjectiveC.Selector) -> IMP? {
         guard let impl = class_getMethodImplementation_stret(value, name) else {
             return nil
         }
         return IMP(impl)
     }
+    #endif
     
     @available(iOS 2.0, *)
     public func getMethodImplementation(stret sel: Selector) -> IMP? {
