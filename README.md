@@ -1,2 +1,2 @@
 # Inspector
-An extended objc runtime wrapper for Swift.
+An elegant Object-Oriented objc runtime wrapper for Swift.
