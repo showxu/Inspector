@@ -39,6 +39,10 @@
 /* Begin PBXFileReference section */
 		33C079ED2009CFAD008628E1 /* Array+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Inspector.swift"; path = "Inspector/Array+Inspector.swift"; sourceTree = "<group>"; };
 		33C079F02009E370008628E1 /* InspectableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InspectableProtocol.swift; path = Inspector/InspectableProtocol.swift; sourceTree = "<group>"; };
+		33C079F52009EB26008628E1 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		33C079F62009EB26008628E1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		33C079F72009EB26008628E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		33C079F82009EBEE008628E1 /* Inspector.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = Inspector.podspec; sourceTree = "<group>"; };
 		33C630DF20089E75002F7CB8 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Object.swift; path = Inspector/Object.swift; sourceTree = "<group>"; };
 		33C630E92008F369002F7CB8 /* ContiguousArray+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ContiguousArray+Inspector.swift"; path = "Inspector/ContiguousArray+Inspector.swift"; sourceTree = "<group>"; };
 		33CFFC8A2008986800D8F11D /* IMP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IMP.swift; path = Inspector/IMP.swift; sourceTree = "<group>"; };
@@ -90,6 +94,17 @@
 			name = Inspectable;
 			sourceTree = "<group>";
 		};
+		33C079F42009EAD4008628E1 /* Deploy */ = {
+			isa = PBXGroup;
+			children = (
+				33C079F82009EBEE008628E1 /* Inspector.podspec */,
+				33C079F52009EB26008628E1 /* .swift-version */,
+				33C079F72009EB26008628E1 /* README.md */,
+				33C079F62009EB26008628E1 /* LICENSE */,
+			);
+			name = Deploy;
+			sourceTree = "<group>";
+		};
 		33C630E22008F137002F7CB8 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				33DF0989200760FB000784D7 /* Source */,
+				33C079F42009EAD4008628E1 /* Deploy */,
 				33DF0988200760E0000784D7 /* Supporting Files */,
 				33DF097E2007606C000784D7 /* Products */,
 			);
