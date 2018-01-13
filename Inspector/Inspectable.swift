@@ -1,19 +1,11 @@
 //
-//  Inspector.swift
+//  Inspectable.swift
 //  Inspector
 //
 
-///
-public protocol InspectableProtocol {
-    
-    associatedtype Element
-    
-    var value: Element { get }
-    
-    init(_ value: Element)
-}
+public typealias Block = Any
 
-///
+/// A base inspectable class type
 public class Inspectable<T>: InspectableProtocol {
     
     public internal(set) var value: Element

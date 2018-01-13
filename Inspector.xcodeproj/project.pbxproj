@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33C079EE2009CFAD008628E1 /* Array+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C079ED2009CFAD008628E1 /* Array+Inspector.swift */; };
+		33C079EF2009CFAD008628E1 /* Array+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C079ED2009CFAD008628E1 /* Array+Inspector.swift */; };
+		33C079F12009E370008628E1 /* InspectableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C079F02009E370008628E1 /* InspectableProtocol.swift */; };
+		33C079F22009E370008628E1 /* InspectableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C079F02009E370008628E1 /* InspectableProtocol.swift */; };
 		33C630E020089E75002F7CB8 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C630DF20089E75002F7CB8 /* Object.swift */; };
 		33C630E120089E75002F7CB8 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C630DF20089E75002F7CB8 /* Object.swift */; };
 		33C630EA2008F369002F7CB8 /* ContiguousArray+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C630E92008F369002F7CB8 /* ContiguousArray+Inspector.swift */; };
@@ -33,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33C079ED2009CFAD008628E1 /* Array+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Array+Inspector.swift"; path = "Inspector/Array+Inspector.swift"; sourceTree = "<group>"; };
+		33C079F02009E370008628E1 /* InspectableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InspectableProtocol.swift; path = Inspector/InspectableProtocol.swift; sourceTree = "<group>"; };
 		33C630DF20089E75002F7CB8 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Object.swift; path = Inspector/Object.swift; sourceTree = "<group>"; };
 		33C630E92008F369002F7CB8 /* ContiguousArray+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ContiguousArray+Inspector.swift"; path = "Inspector/ContiguousArray+Inspector.swift"; sourceTree = "<group>"; };
 		33CFFC8A2008986800D8F11D /* IMP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IMP.swift; path = Inspector/IMP.swift; sourceTree = "<group>"; };
@@ -40,7 +46,7 @@
 		33DF09B62007A32B000784D7 /* Inspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Inspector.h; path = Inspector/Inspector.h; sourceTree = "<group>"; };
 		33DF09B72007A32B000784D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Inspector/Info.plist; sourceTree = "<group>"; };
 		33DF09BA2007A34E000784D7 /* Method.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Method.swift; path = Inspector/Method.swift; sourceTree = "<group>"; };
-		33DF09BB2007A34E000784D7 /* Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Inspectable.swift; path = Inspector/Inspectable.swift; sourceTree = "<group>"; };
+		33DF09BB2007A34E000784D7 /* Inspectable.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; fileEncoding = 4; name = Inspectable.swift; path = Inspector/Inspectable.swift; sourceTree = "<group>"; };
 		33DF09BC2007A34E000784D7 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Inspector/Category.swift; sourceTree = "<group>"; };
 		33DF09BD2007A34E000784D7 /* Ivar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ivar.swift; path = Inspector/Ivar.swift; sourceTree = "<group>"; };
 		33DF09BE2007A34E000784D7 /* Property.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Inspector/Property.swift; sourceTree = "<group>"; };
@@ -68,10 +74,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33C630E22008F137002F7CB8 /* Core */ = {
+		33C079F32009E404008628E1 /* Inspectable */ = {
 			isa = PBXGroup;
 			children = (
-				33DF09BB2007A34E000784D7 /* Inspectable.swift */,
 				33C630DF20089E75002F7CB8 /* Object.swift */,
 				33DF09E0200863B4000784D7 /* Class.swift */,
 				33DF09BA2007A34E000784D7 /* Method.swift */,
@@ -82,12 +87,22 @@
 				33DF09E32008903F000784D7 /* Selector.swift */,
 				33CFFC8A2008986800D8F11D /* IMP.swift */,
 			);
+			name = Inspectable;
+			sourceTree = "<group>";
+		};
+		33C630E22008F137002F7CB8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				33C079F02009E370008628E1 /* InspectableProtocol.swift */,
+				33DF09BB2007A34E000784D7 /* Inspectable.swift */,
+			);
 			name = Core;
 			sourceTree = "<group>";
 		};
 		33C630E32008F169002F7CB8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				33C079ED2009CFAD008628E1 /* Array+Inspector.swift */,
 				33C630E92008F369002F7CB8 /* ContiguousArray+Inspector.swift */,
 			);
 			name = Extensions;
@@ -124,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				33C630E22008F137002F7CB8 /* Core */,
+				33C079F32009E404008628E1 /* Inspectable */,
 				33C630E32008F169002F7CB8 /* Extensions */,
 			);
 			name = Source;
@@ -251,11 +267,13 @@
 				33DF09C32007A34E000784D7 /* Property.swift in Sources */,
 				33DF09BF2007A34E000784D7 /* Method.swift in Sources */,
 				33DF09E42008903F000784D7 /* Selector.swift in Sources */,
+				33C079F12009E370008628E1 /* InspectableProtocol.swift in Sources */,
 				33DF09C02007A34E000784D7 /* Inspectable.swift in Sources */,
 				33DF09E1200863B5000784D7 /* Class.swift in Sources */,
 				33CFFC8B2008986900D8F11D /* IMP.swift in Sources */,
 				33DF09C12007A34E000784D7 /* Category.swift in Sources */,
 				33DF09C22007A34E000784D7 /* Ivar.swift in Sources */,
+				33C079EE2009CFAD008628E1 /* Array+Inspector.swift in Sources */,
 				33DF09C62007A716000784D7 /* Protocol.swift in Sources */,
 				33C630EA2008F369002F7CB8 /* ContiguousArray+Inspector.swift in Sources */,
 			);
@@ -269,11 +287,13 @@
 				33DF09DA2007B31B000784D7 /* Property.swift in Sources */,
 				33DF09D72007B31B000784D7 /* Method.swift in Sources */,
 				33DF09E52008903F000784D7 /* Selector.swift in Sources */,
+				33C079F22009E370008628E1 /* InspectableProtocol.swift in Sources */,
 				33DF09D62007B31B000784D7 /* Inspectable.swift in Sources */,
 				33DF09E2200863B5000784D7 /* Class.swift in Sources */,
 				33DF09D82007B31B000784D7 /* Ivar.swift in Sources */,
 				33DF09D92007B31B000784D7 /* Category.swift in Sources */,
 				33CFFC8C2008986900D8F11D /* IMP.swift in Sources */,
+				33C079EF2009CFAD008628E1 /* Array+Inspector.swift in Sources */,
 				33DF09DC2007B3ED000784D7 /* Protocol.swift in Sources */,
 				33C630EB2008F369002F7CB8 /* ContiguousArray+Inspector.swift in Sources */,
 			);

@@ -19,7 +19,7 @@ final public class IMP: Inspectable<ObjectiveC.IMP>  {
     /// - Note: The IMP that calls this block. Must be disposed of with
     ///     \c imp_removeBlock.
     @available(OSX 10.7, *)
-    public convenience init(block: Any) {
+    public convenience init(block: Block) {
         #if swift(>=4.0)
         let impl = imp_implementationWithBlock(block)
         #else
@@ -31,7 +31,7 @@ final public class IMP: Inspectable<ObjectiveC.IMP>  {
     /// Return the block associated with an IMP that was created using
     /// \c imp_implementationWithBlock.
     @available(OSX 10.7, *)
-    public var block: Any? {
+    public var block: Block? {
         return imp_getBlock(value)
     }
     
@@ -42,7 +42,19 @@ final public class IMP: Inspectable<ObjectiveC.IMP>  {
     /// - Returns: YES if the block was released successfully, NO otherwise.
     ///     (For example, the block might not have been used to create an IMP previously).
     @available(OSX 10.7, *)
-    public func removeBlock() -> Bool {
+    public func remove() -> Bool {
         return imp_removeBlock(value)
     }
 }
+
+extension IMP: CustomStringConvertible, CustomDebugStringConvertible {
+    
+    public var description: String {
+        return "IMP: \(value)"
+    }
+    
+    public var debugDescription: String {
+        return description
+    }
+}
+

@@ -1,14 +1,13 @@
 //
-//  ContiguousArray+Inspector.swift
+//  Array+Inspector.swift
 //  Inspector
 //
 //
 
-extension ContiguousArray {
+extension Array {
     
     /// Return the unsafe underlying data address of the array
     public var baseAddress: UnsafePointer<Element>? {
         return withUnsafeBufferPointer { $0.baseAddress }
     }
 }
-

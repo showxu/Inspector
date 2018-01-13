@@ -56,23 +56,9 @@ final public class Selector: Inspectable<ObjectiveC.Selector>  {
     }
 }
 
-extension Selector: Equatable, Hashable {
-    
-    public static func ==(lhs: Selector, rhs: Selector) -> Bool {
-        return lhs.value == rhs.value
-    }
-    
-    public var hashValue: Int {
-        return value.hashValue
-    }
-}
-
 extension Selector: ExpressibleByStringLiteral {
-
-    public typealias StringLiteralType = String
     
-    public convenience init(stringLiteral value: StringLiteralType) {
-        self.init(uid: value)
-    }
+    
 }
+
 
