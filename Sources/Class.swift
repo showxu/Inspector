@@ -14,7 +14,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///
     /// - Parameter name: The name of the class to look up.
     /// - note \c objc_getClass is different from \c objc_lookUpClass in that if the class is not registered, \c objc_getClass calls the class handler callback and then checks a second time to see whether the class is registered. \c objc_lookUpClass does not call the class handler callback.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public convenience init?(_ name: String) {
         self.init(name, isMeta: false)
     }
@@ -31,7 +31,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///     callback and then checks a second time to see if the class is registered. However, every class.
     ///     definition must have a valid metaclass definition, and so the metaclass definition is always returned,
     ///     whether it’s valid or not.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public convenience init?(_ name: String, isMeta: Bool) {
         let getCls: ((String) -> Element?) = {
             let cStr = $0.utf8CString.baseAddress!
@@ -51,7 +51,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Note: \c objc_getClass is different from this function in that if the class is not
     ///     registered, \c objc_getClass calls the class handler callback and then checks a second
     ///     time to see whether the class is registered. This function does not call the class handler callback.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public convenience init?(lookUp name: String) {
         guard let cls = objc_lookUpClass(name.utf8CString.baseAddress!) else {
             return nil
@@ -65,7 +65,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: The Class object for the named class.
     /// - Note: This function is the same as \c objc_getClass, but kills the process if the class is not found.
     /// - Note: This function is used by ZeroLink, where failing to find a class would be a compile-time link error without ZeroLink.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public convenience init(requiredClass name: String) {
         self.init(objc_getRequiredClass(name.utf8CString.baseAddress!))
     }
@@ -78,39 +78,46 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Warning: You cannot assume that class objects you get from this function are classes that inherit
     ///     from \c NSObject, so you cannot safely call any methods on such classes without detecting
     ///     that the method is implemented first.
-    @available(iOS 2.0, *)
-    public func getClassList() -> [Element]? {
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
+    public class func getClassList<T>(_ transform: (Element) throws -> T) rethrows -> [T]? {
         var outCount = UInt32(0)
         guard let list = objc_copyClassList(&outCount) else {
             return nil
         }
         var count = Int(outCount)
-        var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
-            count -= 1
+        do {
+            var buffer = try Array(repeating: transform(list.pointee!), count: count)
+            try autoreleasepool {
+                while count >= 0 {
+                    try buffer[count] = transform(list[count]!)
+                    count -= 1
+                }
+            }
+            return buffer
+        } catch {
+            throw error
         }
-        #if swift(>=4.0)
-        return buffer
-        #else
-        return buffer as? [Element]
-        #endif
+    }
+    
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
+    public class func getClassList() -> [Element]? {
+        return getClassList { $0 }
     }
     
     /// Returns the name of a class.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public lazy var name: String = {
         return String(cString: class_getName(self.value))
     }()
     
     /// Returns a Boolean value that indicates whether a class object is a metaclass.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public lazy var isMeta: Bool = {
         return class_isMetaClass(self.value)
     }()
     
     /// Returns the superclass of a class.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public var superclass: Element? {
         return class_getSuperclass(value)
     }
@@ -123,7 +130,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// recognize changes to the layout of the instance variables in different class-definition versions.
     /// - note Classes derived from the Foundation framework \c NSObject class can set the class-definition
     /// version number using the \c setVersion: class method, which is implemented using the \c class_setVersion function.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public var version: Int32 {
         get {
             return class_getVersion(value)
@@ -133,7 +140,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     }
     
     /// Returns the size of instances of a class.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public var instanceSize: Int {
         return class_getInstanceSize(value)
     }
@@ -142,7 +149,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///
     /// - Parameter name: The name of the instance variable definition to obtain.
     /// - Returns: Inspectable Ivar
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getInstanceVariable(_ name: String) -> Ivar? {
         return Ivar(class_getInstanceVariable(value, name.utf8CString.baseAddress!)!)
     }
@@ -151,7 +158,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///
     /// - Parameter name: The name of the class variable definition to obtain.
     /// - Returns: Inspectable Ivar
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getClassVariable(_ name: String) -> Ivar? {
         return Ivar(class_getClassVariable(value, name.utf8CString.baseAddress!)!)
     }
@@ -161,7 +168,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: An array of pointers of type Ivar describing the instance variables declared by the class.
     ///   Any instance variables declared by superclasses are not included. The array contains *outCount
     ///   pointers followed by a NULL terminator. You must free the array with free().
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getIvarList() -> [Ivar]? {
         var outCount = UInt32(0)
         guard let list = class_copyIvarList(value, &outCount) else {
@@ -187,7 +194,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///   \e name for the class specified by \e cls, or \c NULL if the specified class or
     ///   its superclasses do not contain an instance method with the specified selector.
     /// - note This function searches superclasses for implementations, whereas \c class_copyMethodList does not.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getInstanceMethod(_ name: ObjectiveC.Selector) -> Method? {
         guard let m = class_getInstanceMethod(value, name) else {
             return nil
@@ -195,7 +202,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
         return Method(m)
     }
     
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getInstanceMethod(_ sel: Selector) -> Method? {
         return getInstanceMethod(sel.value)
     }
@@ -206,7 +213,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: Inspectable Method
     /// - note Note that this function searches superclasses for implementations,
     ///   whereas \c class_copyMethodList does not.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     @inline(__always)
     public func getClassMethod(_ name: ObjectiveC.Selector) -> Method? {
         guard let m = class_getClassMethod(value, name) else {
@@ -216,7 +223,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     }
     
     /// Inspectable version of getClassMethod(_ name: ObjectiveC.Selector) -> Method?
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getClassMethod(_ sel: Selector) -> Method? {
         return getClassMethod(sel.value)
     }
@@ -232,7 +239,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - @note The function pointer returned may be a function internal to the runtime instead of
     ///     an actual method implementation. For example, if instances of the class do not respond to
     ///     the selector, the function pointer returned will be part of the runtime's message forwarding machinery.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodImplementation(_ name: ObjectiveC.Selector) -> IMP? {
         guard let impl = class_getMethodImplementation(value, name) else {
             return nil
@@ -240,7 +247,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
         return IMP(impl)
     }
         
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodImplementation(_ sel: Selector) -> IMP? {
         return self.getMethodImplementation(sel.value)
     }
@@ -261,7 +268,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     }
     #endif
     
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodImplementation(stret sel: Selector) -> IMP? {
         return self.getMethodImplementation(sel.value)
     }
@@ -272,13 +279,13 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: \c YES if instances of the class respond to the selector, otherwise \c NO.
     /// - Note: You should usually use \c NSObject's \c respondsToSelector: or \c instancesRespondToSelector:
     ///  methods instead of this function.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     @inline(__always)
     public func respondsToSelector(_ sel: ObjectiveC.Selector) -> Bool {
         return class_respondsToSelector(value, sel)
     }
     
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func respondsToSelector(_ sel: Selector) -> Bool {
         return respondsToSelector(sel.value)
     }
@@ -291,7 +298,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Note To get the class methods of a class, use \c class_copyMethodList(object_getClass(cls), &count).
     /// - Note To get the implementations of methods that may be implemented by superclasses,
     ///     use \c class_getInstanceMethod or \c class_getClassMethod.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getMethodList() -> [Method]? {
         var outCount = UInt32(0)
         guard let list = class_copyMethodList(value, &outCount) else {
@@ -315,7 +322,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Parameter protocol: A protocol.
     /// - Returns: YES if cls conforms to protocol, otherwise NO.
     /// - Note: You should usually use NSObject's conformsToProtocol: method instead of this function.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func conformsToProtocol(_ aProtocol: ObjectiveC.`Protocol`?) -> Bool {
         return class_conformsToProtocol(value, aProtocol)
     }
@@ -326,7 +333,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///     by the class. Any protocols adopted by superclasses or other protocols are not included.
     ///     The array contains *outCount pointers followed by a NULL terminator. You must free the array with free().
     /// - Note: If cls adopts no protocols, or cls is Nil, returns NULL and *outCount is 0.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getProtocolList() -> [Protocol]? {
         var outCount = UInt32(0)
         guard let list = class_copyProtocolList(value, &outCount) else {
@@ -346,7 +353,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///
     /// - Parameter name: The name of the property you want to inspect.
     /// - Returns: Inspectable property
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getProperty(_ name: String) -> Property? {
         guard let p = class_getProperty(value, name.utf8CString.baseAddress!) else {
             return nil
@@ -359,7 +366,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Returns: An array of pointers of type \c objc_property_t describing the properties
     ///     declared by the class. Any properties declared by superclasses are not included.
     ///     The array contains \c *outCount pointers followed by a \c NULL terminator. You must free the array with \c free().
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getPropertyList() -> [Property]? {
         var outCount = UInt32(0)
         guard let list = class_copyPropertyList(value, &outCount) else {
@@ -376,7 +383,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     }
     
     ///  Ivar layout for a given class.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public var ivarLayout: UnsafePointer<UInt8>? {
         get {
             return class_getIvarLayout(value)
@@ -386,7 +393,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     }
 
     /// Layout for weak Ivars for a given class.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public var weakIvarLayout: UnsafePointer<UInt8>? {
         get {
             return class_getWeakIvarLayout(value)
@@ -406,13 +413,14 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Note class_addMethod will add an override of a superclass's implementation,
     ///     but will not replace an existing implementation in this class.
     ///     To change an existing implementation, use method_setImplementation.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func addMethod(_ name: ObjectiveC.Selector,
                           imp: ObjectiveC.IMP,
                           types: String?) -> Bool {
         return class_addMethod(value, name, imp, types?.utf8CString.baseAddress)
     }
     
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func addMethod(_ sel: Selector,
                           imp: IMP,
                           types: String?) -> Bool {
@@ -433,7 +441,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///         The type encoding specified by \e types is used as given.
     ///     - If the method identified by \e name does exist, its \c IMP is replaced as if \c method_setImplementation were called.
     ///     The type encoding specified by \e types is ignored.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     @inline(__always)
     public func replaceMethod(_ name: ObjectiveC.Selector,
                               imp: ObjectiveC.IMP,
@@ -441,7 +449,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
         return class_replaceMethod(value, name, imp, types?.utf8CString.baseAddress)
     }
     
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func replaceMethod(_ sel: Selector,
                               imp: IMP,
                               types: String?) -> IMP? {
@@ -480,7 +488,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
                              types.utf8CString.baseAddress)
     }
     
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func addIvar(_ ivar: Ivar) -> Bool {
         return addIvar(ivar.name!,
                        types: ivar.typeEncoding!)
@@ -491,7 +499,7 @@ final public class Class: Inspectable<Swift.AnyClass> {
     /// - Parameter aProtocol: The protocol to add to \e cls.
     /// - Returns: \c YES if the method was added successfully, otherwise \c NO
     ///     (for example, the class already conforms to that protocol).
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func addProtocol(_ aProtocol: ObjectiveC.`Protocol`) -> Bool {
         return class_addProtocol(value, aProtocol)
     }
@@ -540,9 +548,32 @@ final public class Class: Inspectable<Swift.AnyClass> {
     ///     The additional bytes can be used to store additional instance variables beyond
     ///     those defined in the class definition.
     /// - Returns: An instance of the class \e cls.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
     public func createInstance(_ extraBytes: Int) -> Any? {
         return class_createInstance(value, extraBytes)
+    }
+}
+
+extension Class {
+    
+    public func subClass(depth: Int = 1) -> [Element] {
+        let allClass = Class.getClassList()
+        var buffer: [Element] = []
+        
+        allClass?.forEach { cls in
+            var aCls: Element? = cls
+            var depth = depth
+            while aCls != nil && depth >= 1 {
+                depth -= 1
+                let superCls: AnyClass? = aCls?.superclass()
+                if superCls == value {
+                    buffer.append(cls)
+                    break
+                }
+                aCls = superCls
+            }
+        }
+        return buffer
     }
 }
 
@@ -561,7 +592,7 @@ extension Class {
     ///     When you are done building the class, call \c objc_registerClassPair. The new class is now ready for use.
     /// - Note Instance methods and instance variables should be added to the class itself.
     ///     Class methods should be added to the metaclass.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
     public convenience init?(_ superclass: Swift.AnyClass?, _ name: String, _ extraBytes: Int) {
         guard let cls = objc_allocateClassPair(superclass, name.utf8CString.baseAddress!, extraBytes) else {
             return nil
@@ -570,7 +601,7 @@ extension Class {
     }
     
     /// Registers a class that was allocated using \c objc_allocateClassPair.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
     public func register() {
         objc_registerClassPair(value)
     }
@@ -581,7 +612,7 @@ extension Class {
     ///   - name: Name of new class
     ///   - extraBytes: extraBytes
     /// - Returns: Duplicated class
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
     public func duplicate(_ name: String, _ extraBytes: Int) -> Element {
         return objc_duplicateClass(value, name.utf8CString.baseAddress!, extraBytes)
     }
@@ -591,7 +622,7 @@ extension Class {
     /// - Note: The class to be destroyed. It must have been allocated with
     ///     \c objc_allocateClassPair
     /// - Warning: Do not call if instances of this class or a subclass exist.
-    @available(iOS 2.0, *)
+    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
     public func dispose() {
         objc_disposeClassPair(value)
     }

@@ -9,7 +9,7 @@ import ObjectiveC.runtime
 final class Object: Inspectable<Any> {
 
     /// Returns the class of an object.
-    @available(OSX 10.5, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public var `class`: Class? {
         guard let cls = object_getClass(value) else {
             return nil
@@ -21,12 +21,12 @@ final class Object: Inspectable<Any> {
     ///
     /// - Parameter cls:  A class object.
     /// - Returns: The previous value of \e object's class, or \c Nil if \e object is \c nil.
-    @available(OSX 10.5, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func setClass(_ cls: Swift.AnyClass) -> Swift.AnyClass? {
         return object_setClass(value, cls)
     }
     
-    @available(OSX 10.5, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func setClass(_ cls: Class) -> Class? {
         guard let `class` = setClass(cls.value) else {
             return nil
@@ -35,7 +35,7 @@ final class Object: Inspectable<Any> {
     }
     
     /// Returns whether an object is a class object.
-    @available(OSX 10.10, *)
+    @available(iOS 8.0, macOS 10.10, tvOS 9.0, watchOS 2.0, *)
     public lazy var isClass: Bool = {
         object_isClass(self.value)
     }()
@@ -46,13 +46,13 @@ final class Object: Inspectable<Any> {
     /// - Returns: The value of the instance variable specified by \e ivar, or \c nil if \e object is \c nil.
     /// - Note: \c object_getIvar is faster than \c object_getInstanceVariable if the Ivar
     ///     for the instance variable is already known.
-    @available(OSX 10.5, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     @inline(__always)
     public func getIvar(_ ivar: ObjectiveC.Ivar) -> Any? {
         return object_getIvar(value, ivar)
     }
     
-    @available(OSX 10.5, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func getIvar(_ ivar: Ivar) -> Any? {
         return object_getIvar(value, ivar.value)
     }
@@ -67,13 +67,13 @@ final class Object: Inspectable<Any> {
     ///     are assigned as if they were unsafe_unretained.
     /// - Note \c object_setIvar is faster than \c object_setInstanceVariable if the Ivar
     ///     for the instance variable is already known.
-    @available(OSX 10.5, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     @inline(__always)
     public func setIvar(_ ivar: ObjectiveC.Ivar, value: Any?) {
         object_setIvar(self.value, ivar, value)
     }
     
-    @available(OSX 10.5, *)
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func setIvar(_ ivar: Ivar, value: Any?) {
         setIvar(ivar.value, value: value)
     }
@@ -94,7 +94,7 @@ final class Object: Inspectable<Any> {
         object_setIvarWithStrongDefault(value, ivar, value)
     }
     
-    @available(OSX 10.12, *)
+    @available(iOS 10.0, macOS 10.12, tvOS 10.0, watchOS 3.0, *)
     public func setIvar(strongDefault ivar: Ivar, _ value: Any?) {
         setIvar(ivar.value, value: value)
     }

@@ -48,5 +48,3 @@ extension Ivar: CustomDebugStringConvertible {
     }
 }
 
-
-
