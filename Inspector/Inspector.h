@@ -5,7 +5,7 @@
 //  Copyright (c) 2016-2018 0xxd0. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Inspector.
 FOUNDATION_EXPORT double InspectorVersionNumber;
