@@ -1,0 +1,8 @@
+//
+//  Config.xcconfig
+//  Inspector
+//
+
+PRODUCT_BUNDLE_IDENTIFIER = com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)
+
+INFOPLIST_FILE = $(SRCROOT)/Sources/Info.plist
