@@ -57,8 +57,6 @@ final public class Selector: Inspectable<ObjectiveC.Selector>  {
 }
 
 extension Selector: ExpressibleByStringLiteral {
-    
-    
 }
 
 
