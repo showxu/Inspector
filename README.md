@@ -69,10 +69,11 @@ The [Swift Package Manager](https://swift.org/package-manager/) is a tool for ma
 let package = Package(
     name: "<#Your Target#>",
     dependencies: [
-        ···
+        // ···
         .Package(url: "https://github.com/0xxd0/Inspector.git", majorVersion: 0)
-        ···
+        // ···
     ]
+)
 ```
 
 ### Manually
