@@ -72,4 +72,3 @@ Coming soon
 [![license](https://img.shields.io/github/license/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat)](https://github.com/0xxd0/Inspector/blob/master/LICENSE)
 
 This project is released under the **MIT License**.
->>>>>>> 1790d5e... Update README.md
