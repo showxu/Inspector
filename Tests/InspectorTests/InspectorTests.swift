@@ -19,15 +19,15 @@ class ClassTests: XCTestCase {
     }
     
     func testPrintClassList() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-//        measure {
-//            print(allClass)
-//        }
+        measure {
+            print(allClass)
+        }
+        addTeardownBlock {
+            self.allClass = []
+        }
     }
 
-    static var allTests = [
+    static let allTests = [
         ("test getClassList", testGetClassList),
         ("test printClassList", testPrintClassList)
     ]
