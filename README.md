@@ -41,7 +41,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-target '<Target>' do
+target '<Your Target>' do
     pod 'Inspector', '~> 0.0.1'
 end
 ```
@@ -58,7 +58,22 @@ Coming soon
 
 ### Swift Package Manager
 
-Coming soon
+The [Swift Package Manager](https://swift.org/package-manager/) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies.
+
+#### Integrate Inspector
+
+```swift
+// Package.swift
+// swift-tools-version:3.0
+
+let package = Package(
+    name: "<#Your Target#>",
+    dependencies: [
+        ···
+        .Package(url: "https://github.com/0xxd0/Inspector.git", majorVersion: 0)
+        ···
+    ]
+```
 
 ### Manually
 
