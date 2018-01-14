@@ -1,7 +1,7 @@
 # Inspector ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat)
 An elegant Object-Oriented objc runtime wrapper for Swift.
 
-![platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-ed523f.svg)  ![language](https://img.shields.io/github/languages/top/0xxd0/Inspector.svg?colorB=ed523f) ![GitHub top count](https://img.shields.io/github/languages/count/0xxd0/Inspector.svg?colorB=ed523f) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0xxd0/Inspector.svg?colorB=ed523f)
+![platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-ed523f.svg)    ![language](https://img.shields.io/github/languages/top/0xxd0/Inspector.svg?colorB=ed523f)  ![Swift Version](https://img.shields.io/badge/Swift-3.2%20%7C%204.0-ed523f.svg)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0xxd0/Inspector.svg?colorB=ed523f)
 
 
 - [Requirement](#requirement)
@@ -9,6 +9,15 @@ An elegant Object-Oriented objc runtime wrapper for Swift.
 - [Document](#document)
 - [License](#license)
 
+## Requirement
+
+#### Required
+- Xcode 9.0+
+- iOS 8.0+ | macOS 10.9+ | tvOS 9.0+ | watchOS 2.0+
+- Swift 3.2+
+
+#### Optional
+- CocoaPods 1.3+
 
 ## Installation
 
@@ -42,6 +51,14 @@ run pod install:
 ```bash
 $ pod install
 ```
+
+### Carthage
+
+Coming soon
+
+### Swift Package Manager
+
+Coming soon
 
 ### Manually
 
