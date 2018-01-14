@@ -102,13 +102,7 @@ extension Method {
     public func exchangeImplementation(_ m: Element) {
         method_exchangeImplementations(value, m)
     }
-}
-
-extension Method {
     
-    /// Exchanges the implementations of two methods.
-    ///
-    /// - Parameter m: Method to exchange.
     @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     public func exchangeImplementation(_  m: Method) {
         method_exchangeImplementations(value, m.value)
