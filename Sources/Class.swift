@@ -88,9 +88,9 @@ final public class Class: Inspectable<Swift.AnyClass> {
         do {
             var buffer = try Array(repeating: transform(list.pointee!), count: count)
             try autoreleasepool {
-                while count >= 0 {
-                    try buffer[count] = transform(list[count]!)
+                while count >= 1 {
                     count -= 1
+                    try buffer[count] = transform(list[count]!)
                 }
             }
             return buffer
@@ -179,9 +179,9 @@ final public class Class: Inspectable<Swift.AnyClass> {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
+        while count >= 1 {
             count -= 1
+            buffer[count] = list[count]
         }
         let ret = buffer.flatMap{ $0 }.map{ Ivar($0) }
         return ret
@@ -309,9 +309,9 @@ final public class Class: Inspectable<Swift.AnyClass> {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
+        while count >= 1 {
             count -= 1
+            buffer[count] = list[count]
         }
         let ret = buffer.flatMap{ $0 }.map{ Method($0) }
         return ret
@@ -341,9 +341,9 @@ final public class Class: Inspectable<Swift.AnyClass> {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
+        while count >= 1 {
             count -= 1
+            buffer[count] = list[count]
         }
         let ret = buffer.flatMap{ $0 }.map{ Protocol($0) }
         return ret
@@ -374,9 +374,9 @@ final public class Class: Inspectable<Swift.AnyClass> {
         }
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
-        while count >= 0 {
-            buffer[count] = list[count]
+        while count >= 1 {
             count -= 1
+            buffer[count] = list[count]
         }
         let ret = buffer.flatMap{ $0 }.map{ Property($0) }
         return ret

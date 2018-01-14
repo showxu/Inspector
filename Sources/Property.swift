@@ -69,9 +69,9 @@ final public class Property: Inspectable<ObjectiveC.objc_property_t> {
         var count = Int(outCount)
         var buffer = Array(repeating: list.pointee, count: count)
         autoreleasepool {
-            while count >= 0 {
-                buffer[count] = list[count]
+            while count >= 1 {
                 count -= 1
+                buffer[count] = list[count]
             }
         }
         return buffer

@@ -1,0 +1,13 @@
+//
+//  Tests.xcconfig
+//  Inspector
+//
+//
+
+PRODUCT_NAME = InsepctorTests
+
+CODE_SIGN_IDENTITY = 
+
+PRODUCT_BUNDLE_IDENTIFIER = com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)
+
+INFOPLIST_FILE = $(SRCROOT)/Tests/Info.plist

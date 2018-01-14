@@ -11,6 +11,12 @@
 		33B06946200A5CF900CBF47C /* String+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B06944200A5CF900CBF47C /* String+Inspector.swift */; };
 		33B06947200A5CF900CBF47C /* String+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B06944200A5CF900CBF47C /* String+Inspector.swift */; };
 		33B06948200A5CF900CBF47C /* String+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B06944200A5CF900CBF47C /* String+Inspector.swift */; };
+		33B06961200B45AB00CBF47C /* Inspector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF09CE2007B284000784D7 /* Inspector.framework */; };
+		33B06973200B47CE00CBF47C /* Inspector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DF097D2007606C000784D7 /* Inspector.framework */; };
+		33B06982200B47ED00CBF47C /* Inspector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C079FE2009F503008628E1 /* Inspector.framework */; };
+		33B0698B200B498100CBF47C /* InspectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07A8A2009FD53008628E1 /* InspectorTests.swift */; };
+		33B0698C200B498200CBF47C /* InspectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07A8A2009FD53008628E1 /* InspectorTests.swift */; };
+		33B0698D200B498300CBF47C /* InspectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07A8A2009FD53008628E1 /* InspectorTests.swift */; };
 		33B9B10C200A5869003550BC /* Dictionary+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B9B10B200A5869003550BC /* Dictionary+Inspector.swift */; };
 		33B9B10D200A5869003550BC /* Dictionary+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B9B10B200A5869003550BC /* Dictionary+Inspector.swift */; };
 		33B9B10E200A5869003550BC /* Dictionary+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B9B10B200A5869003550BC /* Dictionary+Inspector.swift */; };
@@ -81,8 +87,37 @@
 		33C07AE2200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C07ADE200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		33B06962200B45AB00CBF47C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33DF09742007606C000784D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33DF09CD2007B284000784D7;
+			remoteInfo = "Inspector iOS";
+		};
+		33B06974200B47CE00CBF47C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33DF09742007606C000784D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33DF097C2007606C000784D7;
+			remoteInfo = "Inspector macOS";
+		};
+		33B06983200B47ED00CBF47C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33DF09742007606C000784D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33C079FD2009F503008628E1;
+			remoteInfo = "Inspector tvOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		33B06944200A5CF900CBF47C /* String+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Inspector.swift"; sourceTree = "<group>"; };
+		33B0695C200B45AB00CBF47C /* InsepctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsepctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B06968200B464200CBF47C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33B06969200B468400CBF47C /* Tests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Tests.xcconfig; sourceTree = "<group>"; };
+		33B0696E200B47CE00CBF47C /* InsepctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsepctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B0697D200B47ED00CBF47C /* InsepctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsepctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B9B10B200A5869003550BC /* Dictionary+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Inspector.swift"; sourceTree = "<group>"; };
 		33C079F52009EB26008628E1 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		33C079F62009EB26008628E1 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -116,6 +151,30 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33B06959200B45AB00CBF47C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B06961200B45AB00CBF47C /* Inspector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B0696B200B47CE00CBF47C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B06973200B47CE00CBF47C /* Inspector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B0697A200B47ED00CBF47C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B06982200B47ED00CBF47C /* Inspector.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33C079FA2009F503008628E1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +206,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33B06967200B462000CBF47C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33B06968200B464200CBF47C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		33C079F32009E404008628E1 /* Inspectable */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +247,7 @@
 			children = (
 				33C07A882009FD53008628E1 /* LinuxMain.swift */,
 				33C07A892009FD53008628E1 /* InspectorTests */,
+				33B06967200B462000CBF47C /* Supporting Files */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -196,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				33C07ACD2009FDCB008628E1 /* Config.xcconfig */,
+				33B06969200B468400CBF47C /* Tests.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -240,6 +309,9 @@
 				33DF09CE2007B284000784D7 /* Inspector.framework */,
 				33C079FE2009F503008628E1 /* Inspector.framework */,
 				33C07A0B2009F52B008628E1 /* Inspector.framework */,
+				33B0695C200B45AB00CBF47C /* InsepctorTests.xctest */,
+				33B0696E200B47CE00CBF47C /* InsepctorTests.xctest */,
+				33B0697D200B47ED00CBF47C /* InsepctorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +374,60 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		33B0695B200B45AB00CBF47C /* Inspector iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33B06966200B45AB00CBF47C /* Build configuration list for PBXNativeTarget "Inspector iOS Tests" */;
+			buildPhases = (
+				33B06958200B45AB00CBF47C /* Sources */,
+				33B06959200B45AB00CBF47C /* Frameworks */,
+				33B0695A200B45AB00CBF47C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33B06963200B45AB00CBF47C /* PBXTargetDependency */,
+			);
+			name = "Inspector iOS Tests";
+			productName = InspectorTests;
+			productReference = 33B0695C200B45AB00CBF47C /* InsepctorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33B0696D200B47CE00CBF47C /* Inspector macOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33B06976200B47CE00CBF47C /* Build configuration list for PBXNativeTarget "Inspector macOS Tests" */;
+			buildPhases = (
+				33B0696A200B47CE00CBF47C /* Sources */,
+				33B0696B200B47CE00CBF47C /* Frameworks */,
+				33B0696C200B47CE00CBF47C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33B06975200B47CE00CBF47C /* PBXTargetDependency */,
+			);
+			name = "Inspector macOS Tests";
+			productName = "Inspector macOS Tests";
+			productReference = 33B0696E200B47CE00CBF47C /* InsepctorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		33B0697C200B47ED00CBF47C /* Inspector tvOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33B06985200B47ED00CBF47C /* Build configuration list for PBXNativeTarget "Inspector tvOS Tests" */;
+			buildPhases = (
+				33B06979200B47ED00CBF47C /* Sources */,
+				33B0697A200B47ED00CBF47C /* Frameworks */,
+				33B0697B200B47ED00CBF47C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33B06984200B47ED00CBF47C /* PBXTargetDependency */,
+			);
+			name = "Inspector tvOS Tests";
+			productName = "Inspector tvOS Tests";
+			productReference = 33B0697D200B47ED00CBF47C /* InsepctorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		33C079FD2009F503008628E1 /* Inspector tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33C07A032009F503008628E1 /* Build configuration list for PBXNativeTarget "Inspector tvOS" */;
@@ -380,9 +506,22 @@
 		33DF09742007606C000784D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = 0xxd0;
 				TargetAttributes = {
+					33B0695B200B45AB00CBF47C = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					33B0696D200B47CE00CBF47C = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
+					33B0697C200B47ED00CBF47C = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+					};
 					33C079FD2009F503008628E1 = {
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0900;
@@ -418,14 +557,38 @@
 			projectRoot = "";
 			targets = (
 				33DF09CD2007B284000784D7 /* Inspector iOS */,
+				33B0695B200B45AB00CBF47C /* Inspector iOS Tests */,
 				33DF097C2007606C000784D7 /* Inspector macOS */,
+				33B0696D200B47CE00CBF47C /* Inspector macOS Tests */,
 				33C079FD2009F503008628E1 /* Inspector tvOS */,
+				33B0697C200B47ED00CBF47C /* Inspector tvOS Tests */,
 				33C07A0A2009F52B008628E1 /* Inspector watchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		33B0695A200B45AB00CBF47C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B0696C200B47CE00CBF47C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B0697B200B47ED00CBF47C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33C079FC2009F503008628E1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -457,6 +620,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		33B06958200B45AB00CBF47C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B0698B200B498100CBF47C /* InspectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B0696A200B47CE00CBF47C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B0698C200B498200CBF47C /* InspectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33B06979200B47ED00CBF47C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33B0698D200B498300CBF47C /* InspectorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33C079F92009F503008628E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -555,12 +742,108 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		33B06963200B45AB00CBF47C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33DF09CD2007B284000784D7 /* Inspector iOS */;
+			targetProxy = 33B06962200B45AB00CBF47C /* PBXContainerItemProxy */;
+		};
+		33B06975200B47CE00CBF47C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33DF097C2007606C000784D7 /* Inspector macOS */;
+			targetProxy = 33B06974200B47CE00CBF47C /* PBXContainerItemProxy */;
+		};
+		33B06984200B47ED00CBF47C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33C079FD2009F503008628E1 /* Inspector tvOS */;
+			targetProxy = 33B06983200B47ED00CBF47C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		33B06964200B45AB00CBF47C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B06969200B468400CBF47C /* Tests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		33B06965200B45AB00CBF47C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B06969200B468400CBF47C /* Tests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33B06977200B47CE00CBF47C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B06969200B468400CBF47C /* Tests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		33B06978200B47CE00CBF47C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B06969200B468400CBF47C /* Tests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		33B06986200B47ED00CBF47C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B06969200B468400CBF47C /* Tests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		33B06987200B47ED00CBF47C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33B06969200B468400CBF47C /* Tests.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		33C07A042009F503008628E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -568,7 +851,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -580,9 +862,9 @@
 		};
 		33C07A052009F503008628E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -590,7 +872,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -602,10 +883,10 @@
 		};
 		33C07A112009F52B008628E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -613,7 +894,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -625,10 +905,10 @@
 		};
 		33C07A122009F52B008628E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -636,7 +916,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -708,7 +987,6 @@
 		};
 		33DF09842007606C000784D7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -760,9 +1038,9 @@
 		};
 		33DF09862007606C000784D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -772,7 +1050,6 @@
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -782,9 +1059,9 @@
 		};
 		33DF09872007606C000784D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -794,7 +1071,6 @@
 				FRAMEWORK_VERSION = A;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -803,9 +1079,9 @@
 		};
 		33DF09D42007B284000784D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -813,7 +1089,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -825,9 +1100,9 @@
 		};
 		33DF09D52007B284000784D7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33C07ACD2009FDCB008628E1 /* Config.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -835,7 +1110,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.0xxd0.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Inspector;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -848,6 +1122,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33B06966200B45AB00CBF47C /* Build configuration list for PBXNativeTarget "Inspector iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33B06964200B45AB00CBF47C /* Debug */,
+				33B06965200B45AB00CBF47C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33B06976200B47CE00CBF47C /* Build configuration list for PBXNativeTarget "Inspector macOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33B06977200B47CE00CBF47C /* Debug */,
+				33B06978200B47CE00CBF47C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33B06985200B47ED00CBF47C /* Build configuration list for PBXNativeTarget "Inspector tvOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33B06986200B47ED00CBF47C /* Debug */,
+				33B06987200B47ED00CBF47C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		33C07A032009F503008628E1 /* Build configuration list for PBXNativeTarget "Inspector tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
