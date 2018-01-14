@@ -82,7 +82,7 @@ Download zip or clone repo and integrate into your project manually.
 
 ## Document
 
-Coming soon
+See [Online Documentation](https://0xxd0.github.io/Inspector/)
 
 ## License
 [![license](https://img.shields.io/github/license/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat)](https://github.com/0xxd0/Inspector/blob/master/LICENSE)
