@@ -1,0 +1,8 @@
+author: 0xxd0
+author_url: 10173746+0xxd0@users.noreply.github.com
+github_url: https://github.com/0xxd0/Inspector
+root_url: https://alamofire.github.io/Inspector/
+module: Inspector
+output: docs
+theme: apple
+xcodebuild_arguments: [-workspace, 'Inspector.xcworkspace', -scheme, 'Inspector macOS']
