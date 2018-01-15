@@ -6,6 +6,7 @@
         <img src="https://circleci.com/gh/0xxd0/Inspector/tree/master.svg?style=svg"/>
     </a>
     <img src="https://img.shields.io/badge/CocoaPods-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
+    <img src="https://img.shields.io/badge/Carthage-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
     <img src="https://img.shields.io/badge/SPM-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
     <img src="https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat"/>
 </p>
@@ -64,7 +65,22 @@ $ pod install
 
 ### Carthage
 
-Coming soon
+Carthage is intended to be the simplest way to add frameworks to your Cocoa application.
+
+#### Install Carthage 
+
+```shell
+$ brew update
+$ brew install carthage
+```
+
+#### Integrate Inspector
+
+Add following to Cartfile:
+
+```
+github "0xxd0/Inspector" ~> 0.0.1
+```
 
 ### Swift Package Manager
 
