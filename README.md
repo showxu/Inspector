@@ -1,18 +1,11 @@
 
-# Inspector 
+# Inspector [![Circle CI](https://circleci.com/gh/0xxd0/Inspector/tree/master.svg?style=svg)](https://circleci.com/gh/0xxd0/Inspector)
 
-<p align="left">
-    <a href="https://circleci.com/gh/0xxd0/Inspector">
-        <img src="https://circleci.com/gh/0xxd0/Inspector/tree/master.svg?style=svg"/>
-    </a>
-    <a href="https://www.travis-ci.org/0xxd0/Inspector">
-        <img src="https://img.shields.io/travis/Inspector/objc4.svg?style=flat&colorA=24292e&colorB=24292e&"/>
-    </a>
-    <img src="https://img.shields.io/badge/CocoaPods-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
-    <img src="https://img.shields.io/badge/Carthage-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
-    <img src="https://img.shields.io/badge/SPM-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
-    <img src="https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat"/>
-</p>
+[![Travis CI](https://img.shields.io/travis/Inspector/objc4.svg?style=flat&colorA=24292e&colorB=24292e)](https://www.travis-ci.org/0xxd0/Inspector)
+![](https://img.shields.io/badge/CocoaPods-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
+![](https://img.shields.io/badge/Carthage-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
+![](https://img.shields.io/badge/SPM-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
+![](https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat)
 
 An elegant Object-Oriented objc runtime wrapper for Swift.
 
