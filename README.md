@@ -1,8 +1,14 @@
-# Inspector ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat)
+
+# Inspector 
+
+<p align="left">
+    <a href="https://circleci.com/gh/0xxd0/Inspector">
+        <img src="https://circleci.com/gh/0xxd0/Inspector/tree/master.svg?style=svg"/>
+    </a>
+    <img src="https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat"/>
+</p>
+
 An elegant Object-Oriented objc runtime wrapper for Swift.
-
-![platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-ed523f.svg)    ![language](https://img.shields.io/github/languages/top/0xxd0/Inspector.svg?colorB=ed523f)  ![Swift Version](https://img.shields.io/badge/Swift-3.2%20%7C%204.0-ed523f.svg)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0xxd0/Inspector.svg?colorB=ed523f)
-
 
 - [Requirement](#requirement)
 - [Installation](#installation)
@@ -10,6 +16,8 @@ An elegant Object-Oriented objc runtime wrapper for Swift.
 - [License](#license)
 
 ## Requirement
+
+![platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-ed523f.svg)    ![language](https://img.shields.io/github/languages/top/0xxd0/Inspector.svg?colorB=ed523f)  ![Swift Version](https://img.shields.io/badge/Swift-3.2%20%7C%204.0-ed523f.svg)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0xxd0/Inspector.svg?colorB=ed523f)
 
 #### Required
 - Xcode 9.0+
