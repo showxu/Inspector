@@ -5,6 +5,8 @@
     <a href="https://circleci.com/gh/0xxd0/Inspector">
         <img src="https://circleci.com/gh/0xxd0/Inspector/tree/master.svg?style=svg"/>
     </a>
+    <img src="https://img.shields.io/badge/CocoaPods-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
+    <img src="https://img.shields.io/badge/SPM-✔-red.svg?colorA=24292e&colorB=24292e&style=flat"/>
     <img src="https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat"/>
 </p>
 
