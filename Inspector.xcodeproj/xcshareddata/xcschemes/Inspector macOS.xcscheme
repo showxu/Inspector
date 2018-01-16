@@ -29,7 +29,26 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33B0696D200B47CE00CBF47C"
+               BuildableName = "InsepctorTests.xctest"
+               BlueprintName = "Inspector macOS Tests"
+               ReferencedContainer = "container:Inspector.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "33DF097C2007606C000784D7"
+            BuildableName = "Inspector.framework"
+            BlueprintName = "Inspector macOS"
+            ReferencedContainer = "container:Inspector.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
