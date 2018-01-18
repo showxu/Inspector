@@ -95,7 +95,7 @@ final public class Property: Inspectable<ObjectiveC.objc_property_t> {
 
 extension Property {
     
-    public var subAttributes: [Substring: Substring] {
+    var subAttributes: [Substring: Substring] {
         var buffer = [Substring: Substring]()
         return attributes?.split(separator: ",").reduce(buffer, { _, e in
             let split = e.index(after: e.startIndex)
@@ -155,12 +155,12 @@ extension Property {
     }
     
     /// The property defines a custom getter selector name. The name follows the G (for example, GcustomGetter,).
-    public var hasDefinedGetter: Bool {
+    public var hasNamedGetter: Bool {
         return subAttributes.contains(key: TypeEncoding.getter.rawValue.subString)
     }
     
     /// The property defines a custom setter selector name. The name follows the S (for example, ScustomSetter:,).
-    public var hasDefinedSetter: Bool {
+    public var hasNamedSetter: Bool {
         return subAttributes.contains(key: TypeEncoding.setter.rawValue.subString)
     }
     
