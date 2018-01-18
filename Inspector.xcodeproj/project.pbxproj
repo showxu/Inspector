@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333D5A372010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */; };
+		333D5A382010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */; };
+		333D5A392010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */; };
+		333D5A3A2010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */; };
 		33B06945200A5CF900CBF47C /* String+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B06944200A5CF900CBF47C /* String+Inspector.swift */; };
 		33B06946200A5CF900CBF47C /* String+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B06944200A5CF900CBF47C /* String+Inspector.swift */; };
 		33B06947200A5CF900CBF47C /* String+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B06944200A5CF900CBF47C /* String+Inspector.swift */; };
@@ -112,6 +116,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByBlockLiteral.swift; sourceTree = "<group>"; };
 		33B06944200A5CF900CBF47C /* String+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Inspector.swift"; sourceTree = "<group>"; };
 		33B0695C200B45AB00CBF47C /* InsepctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsepctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33B06968200B464200CBF47C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,6 +279,7 @@
 			children = (
 				33C07A8B2009FD7A008628E1 /* InspectableProtocol.swift */,
 				33C07A8C2009FD7A008628E1 /* Inspectable.swift */,
+				333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -655,6 +661,7 @@
 				33C07AA42009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AB02009FD8A008628E1 /* Category.swift in Sources */,
 				33C07AE1200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
+				333D5A392010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */,
 				33C07A932009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA82009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC62009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,
@@ -679,6 +686,7 @@
 				33C07AA52009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AB12009FD8A008628E1 /* Category.swift in Sources */,
 				33C07AE2200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
+				333D5A3A2010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */,
 				33C07A942009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA92009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC72009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,
@@ -703,6 +711,7 @@
 				33C07AA32009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AAF2009FD8A008628E1 /* Category.swift in Sources */,
 				33C07AE0200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
+				333D5A382010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */,
 				33C07A922009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA72009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC52009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,
@@ -727,6 +736,7 @@
 				33C07AA22009FD8A008628E1 /* Selector.swift in Sources */,
 				33C07AAE2009FD8A008628E1 /* Category.swift in Sources */,
 				33C07ADF200A280F008628E1 /* ObjectiveC.Protocol+Inspector.swift in Sources */,
+				333D5A372010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */,
 				33C07A912009FD7A008628E1 /* Inspectable.swift in Sources */,
 				33C07AA62009FD8A008628E1 /* Method.swift in Sources */,
 				33C07AC42009FD90008628E1 /* ContiguousArray+Inspector.swift in Sources */,

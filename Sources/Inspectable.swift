@@ -3,8 +3,6 @@
 //  Inspector
 //
 
-public typealias Block = Any
-
 /// A base inspectable class type
 public class Inspectable<T>: InspectableProtocol {
     

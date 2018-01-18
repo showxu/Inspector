@@ -8,31 +8,6 @@ import ObjectiveC.runtime
 
 /// An class type that represents an Objective-C declared Selector
 final public class Selector: Inspectable<ObjectiveC.Selector>  {
-        
-    /// Returns the name of the method specified by a given selector.
-    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
-    public lazy var name: String = {
-        return String(cString: sel_getName(self.value))
-    }()
-    
-    /// Returns a Boolean value that indicates whether two selectors are equal.
-    ///
-    /// - Parameter other: The selector to compare with self.
-    /// - Returns: \c YES if \e lhs and \e rhs are equal, otherwise \c NO.
-    /// - Note: is equivalent to ==.
-    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
-    public func isEqual(to other: Element) -> Bool {
-        return sel_isEqual(value, other)
-    }
-    
-    /// Identifies a selector as being valid or invalid.
-    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
-    public var isMapped: Bool {
-        return sel_isMapped(value)
-    }
-}
-
-extension Selector {
     
     /// Registers a method with the Objective-C runtime system, maps the method
     /// name to a selector, and returns the selector value.
@@ -56,6 +31,28 @@ extension Selector {
     @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
     public convenience init(uid str: String) {
         self.init(sel_getUid(str.utf8CString.baseAddress!))
+    }
+    
+    /// Returns the name of the method specified by a given selector.
+    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
+    public var name: String {
+        return String(cString: sel_getName(self.value))
+    }
+    
+    /// Returns a Boolean value that indicates whether two selectors are equal.
+    ///
+    /// - Parameter other: The selector to compare with self.
+    /// - Returns: \c YES if \e lhs and \e rhs are equal, otherwise \c NO.
+    /// - Note: is equivalent to ==.
+    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
+    public func isEqual(to other: Element) -> Bool {
+        return sel_isEqual(value, other)
+    }
+    
+    /// Identifies a selector as being valid or invalid.
+    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
+    public var isMapped: Bool {
+        return sel_isMapped(value)
     }
 }
 
