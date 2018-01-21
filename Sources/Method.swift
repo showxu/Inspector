@@ -6,71 +6,18 @@
 
 import ObjectiveC.runtime
 
+
 /// An class type that represents an instance Method.
 final public class Method: Inspectable<ObjectiveC.Method> {
     
-    /// Returns the name of a method.
-    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
-    public lazy var name: Selector = {
-        return Selector(method_getName(self.value))
-    }()
-    
-    /// Returns the implementation of a method.
-    /// The implementation can be modified, so it can't be lazy.
-    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
-    public var implementation: IMP {
-        return IMP(method_getImplementation(value))
-    }
 
-    /// Returns a string describing a method's parameter and return types.
-    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
-    public lazy var typeEncoding: String? = {
-        let type = method_getTypeEncoding(self.value)
-        return type != nil ? String(cString: type!) : nil
-    }()
-    
-    /// Returns the number of arguments accepted by a method.
-    @available(iOS 2.0, macOS 10.0, tvOS 9.0, watchOS 2.0, *)
-    public lazy var numberOfArguments: UInt = {
-        return UInt(method_getNumberOfArguments(self.value))
-    }()
-    
-    /// Returns a string describing a method's return type.
-    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
-    public lazy var returnType: String = {
-        #if swift(>=4.0)
-            let type = method_copyReturnType(self.value)
-        #else
-            let type = method_copyReturnType(self.value)!
-        #endif
-        defer {
-            free(type)
-        }
-        return String(cString: type)
-    }()
-    
-    /// Returns a string describing a single parameter type of a method.
-    @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
-    public lazy var argumentType: ((UInt) -> String?) = {
-        return { [weak self] in
-            precondition($0 < self?.numberOfArguments ?? 0)
-            guard
-                self != nil,
-                let type = method_copyArgumentType(self!.value, UInt32($0))
-            else { return nil }
-            defer {
-                free(type)
-            }
-            return String(cString: type)
-        }
-    }()
 }
 
 extension Method {
     
     @available(iOS 2.0, macOS 10.5, tvOS 9.0, watchOS 2.0, *)
     @inline(__always)
-    final public func getMethodDescription() -> objc_method_description {
+    public func getMethodDescription() -> objc_method_description {
         #if swift(>=4.0)
             let buffer = method_getDescription(value)
         #else

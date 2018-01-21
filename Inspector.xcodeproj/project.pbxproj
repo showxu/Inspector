@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330A09542014675000B4D966 /* MethodContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330A09532014675000B4D966 /* MethodContainer.swift */; };
+		330A09552014675000B4D966 /* MethodContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330A09532014675000B4D966 /* MethodContainer.swift */; };
+		330A09562014675000B4D966 /* MethodContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330A09532014675000B4D966 /* MethodContainer.swift */; };
+		330A09572014675000B4D966 /* MethodContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 330A09532014675000B4D966 /* MethodContainer.swift */; };
 		333D5A372010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */; };
 		333D5A382010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */; };
 		333D5A392010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */; };
@@ -116,6 +120,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		330A09532014675000B4D966 /* MethodContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodContainer.swift; sourceTree = "<group>"; };
 		333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByBlockLiteral.swift; sourceTree = "<group>"; };
 		33B06944200A5CF900CBF47C /* String+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Inspector.swift"; sourceTree = "<group>"; };
 		33B0695C200B45AB00CBF47C /* InsepctorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsepctorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +285,7 @@
 				33C07A8B2009FD7A008628E1 /* InspectableProtocol.swift */,
 				33C07A8C2009FD7A008628E1 /* Inspectable.swift */,
 				333D5A362010D43E002EDEC1 /* ExpressibleByBlockLiteral.swift */,
+				330A09532014675000B4D966 /* MethodContainer.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -670,6 +676,7 @@
 				33B06947200A5CF900CBF47C /* String+Inspector.swift in Sources */,
 				33C07ACA2009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33B9B10E200A5869003550BC /* Dictionary+Inspector.swift in Sources */,
+				330A09562014675000B4D966 /* MethodContainer.swift in Sources */,
 				33C07AB42009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB82009FD8A008628E1 /* Ivar.swift in Sources */,
 			);
@@ -695,6 +702,7 @@
 				33B06948200A5CF900CBF47C /* String+Inspector.swift in Sources */,
 				33C07ACB2009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33B9B10F200A5869003550BC /* Dictionary+Inspector.swift in Sources */,
+				330A09572014675000B4D966 /* MethodContainer.swift in Sources */,
 				33C07AB52009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB92009FD8A008628E1 /* Ivar.swift in Sources */,
 			);
@@ -720,6 +728,7 @@
 				33B06946200A5CF900CBF47C /* String+Inspector.swift in Sources */,
 				33C07AC92009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33B9B10D200A5869003550BC /* Dictionary+Inspector.swift in Sources */,
+				330A09552014675000B4D966 /* MethodContainer.swift in Sources */,
 				33C07AB32009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB72009FD8A008628E1 /* Ivar.swift in Sources */,
 			);
@@ -745,6 +754,7 @@
 				33B06945200A5CF900CBF47C /* String+Inspector.swift in Sources */,
 				33C07AC82009FD90008628E1 /* Array+Inspector.swift in Sources */,
 				33B9B10C200A5869003550BC /* Dictionary+Inspector.swift in Sources */,
+				330A09542014675000B4D966 /* MethodContainer.swift in Sources */,
 				33C07AB22009FD8A008628E1 /* Protocol.swift in Sources */,
 				33C07AB62009FD8A008628E1 /* Ivar.swift in Sources */,
 			);
