@@ -2,175 +2,189 @@
   "warnings": [
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 103,
+      "line": 121,
       "symbol": "Class.getClassList()",
       "symbol_kind": "source.lang.swift.decl.function.method.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 206,
+      "line": 224,
       "symbol": "Class.getInstanceMethod(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 251,
+      "line": 269,
       "symbol": "Class.getMethodImplementation(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 272,
+      "line": 290,
       "symbol": "Class.getMethodImplementation(stret:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 289,
+      "line": 307,
       "symbol": "Class.respondsToSelector(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 424,
+      "line": 442,
       "symbol": "Class.addMethod(_:imp:types:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 453,
+      "line": 471,
       "symbol": "Class.replaceMethod(_:imp:types:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 492,
+      "line": 510,
       "symbol": "Class.addIvar(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 527,
+      "line": 545,
       "symbol": "Class.addProperty(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Class.swift",
-      "line": 559,
+      "line": 577,
       "symbol": "Class.subClass(depth:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Dictionary+Inspector.swift",
-      "line": 10,
+      "line": 28,
       "symbol": "Dictionary.contains(key:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
+      "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/ExpressibleByBlockLiteral.swift",
+      "line": null,
+      "symbol": "ExpressibleByBlockLiteral",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/ExpressibleByBlockLiteral.swift",
+      "line": 27,
+      "symbol": "ExpressibleByBlockLiteral",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/IMP.swift",
-      "line": 10,
+      "line": 28,
       "symbol": "IMP",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Inspectable.swift",
-      "line": 11,
+      "line": 28,
       "symbol": "Inspectable.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Inspectable.swift",
-      "line": 15,
+      "line": 32,
       "symbol": "Inspectable.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 12,
+      "line": 30,
       "symbol": "InspectableProtocol.value",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 14,
+      "line": 32,
       "symbol": "InspectableProtocol.init(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 20,
+      "line": 38,
       "symbol": "InspectableProtocol.hashValue",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 28,
+      "line": 46,
       "symbol": "InspectableProtocol.==(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 36,
+      "line": 54,
       "symbol": "InspectableProtocol.description",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 44,
+      "line": 62,
       "symbol": "InspectableProtocol.debugDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 52,
+      "line": 70,
       "symbol": "InspectableProtocol.debugDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/InspectableProtocol.swift",
-      "line": 60,
+      "line": 78,
       "symbol": "InspectableProtocol.init(stringLiteral:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Method.swift",
-      "line": 73,
+      "line": 91,
       "symbol": "Method.getMethodDescription()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Method.swift",
-      "line": 94,
+      "line": 112,
       "symbol": "Method.setImplementation(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Method.swift",
-      "line": 107,
+      "line": 125,
       "symbol": "Method.exchangeImplementation(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -184,119 +198,112 @@
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 12,
+      "line": 30,
       "symbol": "Property.TypeEncoding",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 22,
+      "line": 40,
       "symbol": "Property.TypeEncoding.getter",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 24,
+      "line": 42,
       "symbol": "Property.TypeEncoding.setter",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 26,
+      "line": 44,
       "symbol": "Property.TypeEncoding.dynamic",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 28,
+      "line": 46,
       "symbol": "Property.TypeEncoding.weak",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 30,
+      "line": 48,
       "symbol": "Property.TypeEncoding.gcEligible",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 32,
+      "line": 50,
       "symbol": "Property.TypeEncoding.typeEncodingOld",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 34,
+      "line": 52,
       "symbol": "Property.TypeEncoding.iVar",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 36,
+      "line": 54,
       "symbol": "Property.TypeEncoding.typeEncoding",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 98,
-      "symbol": "Property.subAttributes",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 108,
+      "line": 126,
       "symbol": "Property.typeEncoding",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 114,
+      "line": 132,
       "symbol": "Property.iVar",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 121,
+      "line": 139,
       "symbol": "Property.typeEncodingOld",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Property.swift",
-      "line": 126,
+      "line": 144,
       "symbol": "Property.getter",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Protocol.swift",
-      "line": 112,
+      "line": 130,
       "symbol": "Protocol.getMethodDescription(_:isRequired:isInstance:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/Protocol.swift",
-      "line": 265,
+      "line": 283,
       "symbol": "Protocol.addMethodDescription(_:types:isRequired:isInstance:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/alchemist/Developer/Repository/Github/0xxd0/Inspector/Sources/String+Inspector.swift",
-      "line": 10,
+      "line": 28,
       "symbol": "String.subString",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"

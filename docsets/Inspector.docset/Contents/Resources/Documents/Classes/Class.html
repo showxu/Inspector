@@ -37,7 +37,7 @@
                 <a href="../Classes/Class.html">Class</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/IMP.html">IMP</a>
+                <a href="../Classes.html#/s:9Inspector3IMPC">IMP</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Inspectable.html">Inspectable</a>
@@ -82,6 +82,9 @@
           <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ExpressibleByBlockLiteral.html">ExpressibleByBlockLiteral</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Protocols/InspectableProtocol.html">InspectableProtocol</a>
               </li>
@@ -897,7 +900,7 @@ the selector, the function pointer returned will be part of the runtime&rsquo;s 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -948,7 +951,7 @@ the selector, the function pointer returned will be part of the runtime&rsquo;s 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -975,7 +978,7 @@ the selector, the function pointer returned will be part of the runtime&rsquo;s 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">stret</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getMethodImplementation</span><span class="p">(</span><span class="n">stret</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1367,7 +1370,7 @@ To change an existing implementation, use method_setImplementation.
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
-                      <span class="nv">imp</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
+                      <span class="nv">imp</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">,</span>
                       <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
@@ -1444,7 +1447,7 @@ To change an existing implementation, use method_setImplementation.
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
-                      <span class="nv">imp</span><span class="p">:</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
+                      <span class="nv">imp</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">,</span>
                       <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
@@ -1485,8 +1488,8 @@ The type encoding specified by \e types is ignored.</li>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replaceMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
-                          <span class="nv">imp</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
-                          <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+                          <span class="nv">imp</span><span class="p">:</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">,</span>
+                          <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ObjectiveC</span><span class="o">.</span><span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1563,8 +1566,8 @@ must be “@:” (the first character is the return type).</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replaceMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">sel</span><span class="p">:</span> <span class="kt"><a href="../Classes/Selector.html">Selector</a></span><span class="p">,</span>
-                          <span class="nv">imp</span><span class="p">:</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">,</span>
-                          <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/IMP.html">IMP</a></span><span class="p">?</span></code></pre>
+                          <span class="nv">imp</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">,</span>
+                          <span class="nv">types</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes.html#/s:9Inspector3IMPC">IMP</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -2238,7 +2241,7 @@ the class and metaclass objects. This should usually be \c 0.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2018 <a class="link" href="https://github.com/0xxd0/Inspector" target="_blank" rel="external">0xxd0</a>. All rights reserved. (Last updated: 2018-01-14)</p>
+          <p>&copy; 2018 <a class="link" href="https://github.com/0xxd0/Inspector" target="_blank" rel="external">0xxd0</a>. All rights reserved. (Last updated: 2018-01-22)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
