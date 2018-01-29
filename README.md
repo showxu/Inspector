@@ -1,7 +1,7 @@
 
 # Inspector [![Circle CI](https://circleci.com/gh/0xxd0/Inspector/tree/master.svg?style=svg)](https://circleci.com/gh/0xxd0/Inspector)
 
-[![Travis CI](https://img.shields.io/travis/Inspector/objc4.svg?style=flat&colorA=24292e&colorB=24292e)](https://www.travis-ci.org/0xxd0/Inspector)
+[![Travis CI](https://img.shields.io/travis/0xxd0/Inspector.svg?style=flat&colorA=24292e&colorB=24292e)](https://www.travis-ci.org/0xxd0/Inspector)
 ![](https://img.shields.io/badge/CocoaPods-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
 ![](https://img.shields.io/badge/Carthage-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
 ![](https://img.shields.io/badge/SPM-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
