@@ -1,11 +1,11 @@
 
 # Inspector [![Circle CI](https://circleci.com/gh/0xxd0/Inspector/tree/master.svg?style=svg)](https://circleci.com/gh/0xxd0/Inspector)
 
-[![Travis CI](https://img.shields.io/travis/0xxd0/Inspector.svg?style=flat&colorA=24292e&colorB=24292e)](https://www.travis-ci.org/0xxd0/Inspector)
-![](https://img.shields.io/badge/CocoaPods-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
-![](https://img.shields.io/badge/Carthage-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
-![](https://img.shields.io/badge/SPM-✔-red.svg?colorA=24292e&colorB=24292e&style=flat)
-![](https://img.shields.io/github/repo-size/0xxd0/Inspector.svg?colorA=24292e&colorB=24292e&style=flat)
+[![Travis CI](https://img.shields.io/travis/0xxd0/Inspector.svg)](https://www.travis-ci.org/0xxd0/Inspector)
+[![CocoaPods](https://img.shields.io/cocoapods/p/Inspector.svg)](gitHub.com/0xxd0/Inspector)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Inspector.svg)](gitHub.com/0xxd0/Inspector)
+[![](https://img.shields.io/github/repo-size/0xxd0/Inspector.svg)]()
+[![Swift Version](https://img.shields.io/badge/Swift-3.2%20%7C%204.0-ed523f.svg)]()
 
 An elegant Object-Oriented objc runtime wrapper for Swift.
 
@@ -16,7 +16,7 @@ An elegant Object-Oriented objc runtime wrapper for Swift.
 
 ## Requirement
 
-![platform](https://img.shields.io/badge/platform-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-ed523f.svg)    ![language](https://img.shields.io/github/languages/top/0xxd0/Inspector.svg?colorB=ed523f)  ![Swift Version](https://img.shields.io/badge/Swift-3.2%20%7C%204.0-ed523f.svg)   ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/0xxd0/Inspector.svg?colorB=ed523f)
+
 
 #### Required
 - Xcode 9.0+
